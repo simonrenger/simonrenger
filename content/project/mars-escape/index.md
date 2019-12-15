@@ -1,0 +1,48 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Mars Escape"
+subtitle: "A wave based shooter prototype."
+summary: "A wave based shooter prototype created in 2 weeks.  [more...](/project/mars-escape/)"
+authors: ["admin"]
+tags: ["windows","prototype","ue4"]
+icons: ["logo logo-ue4","fab fa-windows text-orange"]
+categories: ["portfolio"]
+date: 2018-12-14T21:19:00+01:00
+lastmod: 2019-04-14T21:19:00+01:00
+featured: true
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "A wave based shooter created within 2 weeks."
+  focal_point: "Smart"
+  preview_only: true
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+Mars Escape is a wave based shooter prototype created in Unreal Engine 4.
+
+
+| Project Information |                                       |
+| ------------------- | ------------------------------------- |
+| Duration:           | 2 Weeks                               |
+| Teamsize:           | 2 Programmers, 4 Designers, 3 Artists |
+| Roles:              | Producer                              |
+| Engine:             | Unreal Engine                         |
+| Platform:           | Windows                               |
+| Languages:          | Blueprints                            |
+
+| Project Highlights                                       |
+| -------------------------------------------------------- |
+| Executed proficient with in 2 weeks of development cycle |
+
+

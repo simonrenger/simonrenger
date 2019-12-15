@@ -1,0 +1,139 @@
+i.logo {
+    width: .75em;
+    height: .75em;
+    font-size: .75em !important;
+    padding: .75em;
+    display: inline-block;
+}
+i.logo-cpp{
+    background-size:cover;
+    background-image:url(../img/cpp.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-xml{
+    background-size:cover;
+    background-image:url(../img/xml.png);
+}
+i.logo-toml{
+    background-size:cover;
+    background-image:url(../img/toml.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-yaml{
+    background-size:cover;
+    background-image:url(../img/yaml.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-rust{
+    background-size:cover;
+    background-image:url(../img/rust.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-csharp{
+    background-size:cover;
+    background-image:url(../img/csharp.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-vs{
+    background-size:cover;
+    background-image:url(../img/visualstudio.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+
+i.logo-cmake{
+    background-size:cover;
+    background-image:url(../img/cmake.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+
+i.logo-json{
+    background-size:cover;
+    background-image:url(../img/json.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-css{
+    background-size:cover;
+    background-image:url(../img/css.png)
+}
+
+i.logo-gearvr{
+    background-size:cover;
+    background-image:url(../img/gearvr.png)
+}
+
+i.logo-html5{
+    background-size:cover;
+    background-image:url(../img/html5.png)
+}
+
+i.logo-rasppi{
+    background-size:cover;
+    background-image:url(../img/rasppi.png)
+}
+i.logo-unity{
+    background-size:cover;
+    background-image:url(../img/unity.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+  
+}
+i.logo-ue4{
+    background-size:cover;
+    background-image:url(../img/unrealengine.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-git{
+    background-size:cover;
+    background-image:url(../img/git.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-perforce{
+    background-size:cover;
+    background-image:url(../img/perforce.png);
+}
+i.logo-lua{
+    background-size:cover;
+    background-image:url(../img/lua.svg);
+    filter: invert(46%) sepia(56%) saturate(1495%) hue-rotate(5deg) brightness(111%) contrast(102%);
+}
+i.logo-jira{
+    background-size:cover;
+    background-image:url(../img/jira.png);
+}
+
+.featurette-icon{
+    color:#ff8b00!important;
+}
+
+.text-orange{
+    color:#ff8b00!important;
+}
+
+a{
+    color:#ff8b00!important;
+}
+.navbar .navbar-nav .nav-link{
+    color:#111!important;
+}
+.navbar .navbar-nav .nav-link.active{
+    color:#ff8b00!important;
+}
+
+.btn-outline-primary:hover{
+    color:#fff!important;
+    background:#ff8b00!important;
+    border-color:#ff8b00;
+}
+
+.btn-outline-primary{
+    color:#ff8b00;
+    border-color:#ff8b00;
+}
+
+.navbar-brand{
+    font-family:'Permanent Marker';
+    color:#111!important;
+}
+
+.portrait-title h2{
+    font-family:'Permanent Marker';
+}
