@@ -6,7 +6,7 @@ subtitle: "A Custom C++ crossplatform network card game engine"
 summary: "A multiplayer crossplatfrom c++ card game engine developed in 16 weeks. [more...](/project/tbsg/)"
 authors: ["admin"]
 tags: ["cpp","ps4","windows"]
-icons: ["logo logo-cpp","logo logo-lua","fab fa-js text-orange","fab fa-windows text-orange","fab fa-playstation text-orange"]
+icons: ["logo logo-cpp svg-black","logo logo-lua svg-black","fab fa-js text-black","fab fa-windows text-black","fab fa-playstation text-black"]
 categories: ["portfolio"]
 date: 2019-05-01T20:19:00+01:00
 lastmod: 2019-05-01T21:19:00+01:00
@@ -29,7 +29,8 @@ image:
 projects: []
 ---
 
-The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. It has an extensive tooling written in JavaScript & Electron. I was in charge for the core Framework design as well as for the Tool design and execution. The unpublished game we build with it is called raptoads. 
+The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. Besides being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides this I have been responsible for implementing and designing the extensive tooling and pipeline for content creation, content management. The tooling was created in web technologies (electron & SQL Database), this allowed us for quick and rapid iterations. The game we created with this was called Raptoads.
+
 
 | Project Information |                                                              |
 | ------------------- | ------------------------------------------------------------ |
@@ -44,6 +45,9 @@ The tomorrow engine is a cross platform C++ game framework which allows the crea
 | Project Highlights                                           |
 | ------------------------------------------------------------ |
 | Scripting Pipeline: A Lua dialect which allowed designers to quickly develop with our tooling the card behaviour. |
-| Custom Tooling written with Web technologies for quick iterations, tool of choice: Electron & MaraDB |
+| Scripting source control integration - via the tooling |
+| Google Drive integration & Sheets |
+| Utility AI - custimizeble via the tooling |
+| Custom Tooling written with Web technologies for quick iterations, tool of choice: Electron & MariaDB |
 | Playstation 4 Support: The engine supported Playstation 4    |
 

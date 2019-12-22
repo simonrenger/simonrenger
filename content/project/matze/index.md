@@ -3,15 +3,28 @@
 
 title: "Matze (In Development)"
 subtitle: "A learning project written in C# and C++ to practice my API design skills."
-summary: "A cross platform matze generator toolchain written in C# and C++ to practice API design [more...](/project/matze/)"
+summary: "A cross platform matze generator toolchain written in C# and C++ to practice API design. [more...](/project/matze/)"
 authors: ["admin"]
 tags: ["windows","cpp","linux","csharp"]
-icons: ["logo logo-cpp","logo logo-csharp","fab fa-windows text-orange","fab fa-linux text-orange"]
+icons: ["logo logo-cpp svg-black","logo logo-csharp svg-black","fab fa-windows text-black","fab fa-linux text-black"]
 categories: ["portfolio"]
 date: 2019-01-01T10:10:00+01:00
 lastmod: 2019-09-14T11:19:00+01:00
 featured: false
 draft: false
+links: 
+  - icon_pack: "fab"
+    icon: "github"
+    url: "https://github.com/simonrenger/matze-csharp"
+    name: "Matze C++ Lib"
+  - icon_pack: "fab"
+    icon: "github"
+    url: "https://github.com/simonrenger/matze-cpp"
+    name: "Matze C++ Lib"
+  - icon_pack: "fab"
+    icon: "github"
+    url: "https://github.com/simonrenger/matze-csharp-cli"
+    name: "Matze CLI"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -28,9 +41,9 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-Matze is a matze generator tool chain consisting out of multiple matze generator algorithms. It contains an commandline tool to generate mazes. The commandline tool is written in C# (.Net Core).
-
-This project was born to give me a playground to practice API design in C# and C++. The main goal for this project is it to create a similar API in my C++ Lib as well as in my C# lib. 
+Matze is my maze generator tool chain consisting out of multiple maze generator algorithms. It contains a command line tool to generate mazes. The command line tool is written in C# (.Net Core).
+ 
+This project was born to give me a playground to practice API design in C# and C++. The main goal for this project is it to create a similar API in my C++ Lib as well as in my C# lib.
 
 - [Matze C#](https://github.com/simonrenger/matze-csharp).
 - [Matze C++](https://github.com/simonrenger/matze-cpp).
@@ -39,6 +52,7 @@ This project was born to give me a playground to practice API design in C# and C
 
 | Project Information |                                                       |
 | ------------------- | ----------------------------------------------------- |
+| Type:           | Library, tool chain, CLI                  |
 | Duration:           | January 2019 - Ongoing Development                  |
 | Teamsize:           | 1 Programmer                                         |
 | Roles:              | Maintainer                           |

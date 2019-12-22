@@ -3,15 +3,21 @@
 
 title: "Eyos (In Development)"
 subtitle: "A multiplayer RTS game written in C++ with data oriented design in mind. A learning project to deppen my C++ knowlegde and my network programming skills."
-summary: "A multiplayer RTS game written in C++ with data oriented design in mind. This is a side project with two other students. [more...](/project/eyos/)"
+summary: "A multiplayer RTS game written in C++ with data oriented design in mind. A learning project to  challange my network programming skills. [more...](/project/eyos/)"
 authors: ["admin"]
 tags: ["windows","cpp","linux"]
-icons: ["logo logo-cpp","logo logo-cmake","fab fa-github text-orange","fab fa-windows text-orange","fab fa-linux text-orange"]
+icons: ["logo logo-cpp svg-black","logo logo-cmake svg-black","fab fa-github text-black","fab fa-windows text-black","fab fa-linux text-black"]
 categories: ["portfolio"]
 date: 2019-12-01T15:10:00+01:00
 lastmod: 2019-12-14T21:19:00+01:00
 featured: false
 draft: false
+
+links: 
+  - icon_pack: "fab"
+    icon: "github"
+    url: "https://github.com/Eothaun/Eyos"
+    name: "Eyos"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -29,11 +35,12 @@ image:
 projects: []
 ---
 
-Eyos is a cross platfrom (Windows and Linux) targeting 2D multiplayer RTS. This project has not as goal to create the most impressive game, it is a learning oppurtunity for us to enhance our C++ knowlegde in terms of system design. For me personally it is an project to enhance my network programming skills. We are following the open development principle. The repositry can be found here [GitHub](https://github.com/Eothaun/Eyos).
+Eyos is a cross platform (Windows and Linux) targeting 2D multiplayer RTS focused on managing a massive amount of units. I see this project as a chance to enhance and challenge my network programming skills as well as my software engineering skills. The development of this project is open and can be found on github. ([GitHub](https://github.com/Eothaun/Eyos)).
 
 
 | Project Information |                                                       |
 | ------------------- | ----------------------------------------------------- |
+| Type:           | Networking RTS                 |
 | Duration:           | Decemeber 2019 - Ongoing Development                  |
 | Teamsize:           | 3 Programmers                                         |
 | Roles:              | Engine & Network programmer                           |
@@ -42,9 +49,6 @@ Eyos is a cross platfrom (Windows and Linux) targeting 2D multiplayer RTS. This 
 | Languages:          | C++                                                    |
 | Technologies:       | cmake, clang & msvc, git, bgfx          |
 
-| Project Highlights                                           |
-| ------------------------------------------------------------ |
-| The aim is it to get as many unity as possible on the screen |
 
 <div class="github-card" data-github="Eothaun/Eyos" data-width="400" data-height="153" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>

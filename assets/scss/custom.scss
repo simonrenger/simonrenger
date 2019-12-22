@@ -137,3 +137,64 @@ a{
 .portrait-title h2{
     font-family:'Permanent Marker';
 }
+
+.text-blue{
+    color:rgb(7, 108, 241)!important;//#filter: invert(27%) sepia(71%) saturate(4152%) hue-rotate(206deg) brightness(100%) contrast(95%);
+}
+
+.text-green{
+    color:rgb(7, 241, 132)!important;//#07f184
+}
+
+.text-pink{
+    color:rgb(212, 63, 138)!important;
+}
+
+
+.text-black{
+    color:rgb(0, 0, 0)!important;
+}
+body.dark  i.text-black{
+    color:rgb(255, 255, 255)!important;
+}
+
+.text-gray{
+    color:#808080!important;
+}
+
+.svg-gray{
+    filter: invert(55%) sepia(3%) saturate(13%) hue-rotate(314deg) brightness(91%) contrast(77%)!important;
+}
+
+.svg-blue{
+    filter: invert(27%) sepia(71%) saturate(4152%) hue-rotate(206deg) brightness(100%) contrast(95%)!important;
+}
+
+.svg-black{
+    filter: invert(0%) sepia(4%) saturate(0%) hue-rotate(314deg) brightness(101%) contrast(105%)!important;
+}
+body.dark  i.svg-black{
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%)!important;
+}
+
+.svg-green{
+    filter: invert(81%) sepia(97%) saturate(2792%) hue-rotate(72deg) brightness(93%) contrast(104%)!important;
+}
+
+.svg-pink{
+    filter: invert(53%) sepia(63%) saturate(6791%) hue-rotate(308deg) brightness(90%) contrast(83%)!important;
+}
+#skilloverview{
+    padding-bottom: 5px;
+}
+#skilllist{
+    padding-top: 10px;
+}
+
+table{
+display: table;    
+}
+
+#about h3{
+    font-weight: 400!important;
+}

@@ -2,7 +2,7 @@
 # A Skills section created with the Featurette widget.
 widget = "featurette"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 60  # Order that this section will appear.
 
 title = "Programming languages"
@@ -36,7 +36,7 @@ subtitle = ""
   icon = "csharp"
   icon_pack = "logo"
   name = "C#"
-  description = "4 year"
+  description = "3 year"
 
 [[feature]]
   icon = "js"

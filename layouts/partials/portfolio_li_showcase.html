@@ -45,14 +45,14 @@
       </div>
       {{ end }}
 
-      <div class="btn-links">
-        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
-      </div>
-
       <div style="font-size:32px;">
        {{range $icon := $item.Params.icons}}
        <i class="{{$icon}}"></i>
        {{end}}
+      </div>
+
+      <div class="btn-links">
+        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
       </div>
 
     </div>

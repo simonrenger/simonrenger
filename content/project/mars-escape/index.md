@@ -3,10 +3,10 @@
 
 title: "Mars Escape"
 subtitle: "A wave based shooter prototype."
-summary: "A wave based shooter prototype created in 2 weeks.  [more...](/project/mars-escape/)"
+summary: "A wave based shooter prototype created in 2 weeks, created in Unreal Engine 4.  [more...](/project/mars-escape/)"
 authors: ["admin"]
 tags: ["windows","prototype","ue4"]
-icons: ["logo logo-ue4","fab fa-windows text-orange"]
+icons: ["logo logo-ue4 svg-black","fab fa-windows text-black"]
 categories: ["portfolio"]
 date: 2018-12-14T21:19:00+01:00
 lastmod: 2019-04-14T21:19:00+01:00
@@ -28,12 +28,12 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
-Mars Escape is a wave based shooter prototype created in Unreal Engine 4.
-
+ 
+Mars Escape is a wave based shooter prototype created in Unreal Engine 4. Besides my responsibilities as producer I have helped implementing the gameplay system in Blueprints. This project has tought me a lot about project managment and teamwork as well as rapid prototyping.
 
 | Project Information |                                       |
 | ------------------- | ------------------------------------- |
+| Type:           | Wave based Shooter - **Prototype**                               |
 | Duration:           | 2 Weeks                               |
 | Teamsize:           | 2 Programmers, 4 Designers, 3 Artists |
 | Roles:              | Producer                              |
@@ -41,8 +41,5 @@ Mars Escape is a wave based shooter prototype created in Unreal Engine 4.
 | Platform:           | Windows                               |
 | Languages:          | Blueprints                            |
 
-| Project Highlights                                       |
-| -------------------------------------------------------- |
-| Executed proficient with in 2 weeks of development cycle |
 
 
