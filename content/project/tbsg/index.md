@@ -3,7 +3,7 @@
 
 title: "Custom Card Game Engine"
 subtitle: "A Custom C++ crossplatform network card game engine"
-summary: "A multiplayer crossplatfrom c++ card game engine developed in 16 weeks. [more...](/project/tbsg/)"
+summary: "A multiplayer crossplatfrom c++ card game engine developed in 16 weeks. [more information](/project/tbsg/)"
 authors: ["admin"]
 tags: ["cpp","ps4","windows"]
 icons: ["logo logo-cpp svg-black","logo logo-lua svg-black","fab fa-js text-black","fab fa-windows text-black","fab fa-playstation text-black"]
@@ -19,7 +19,7 @@ draft: false
 image:
   caption: "A multiplayer crossplatfrom c++ card game engine developed in 16 weeks."
   focal_point: "Smart"
-  preview_only: false
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -29,15 +29,25 @@ image:
 projects: []
 ---
 
-The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. Besides being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides this I have been responsible for implementing and designing the extensive tooling and pipeline for content creation, content management. The tooling was created in web technologies (electron & SQL Database), this allowed us for quick and rapid iterations. The game we created with this was called Raptoads.
+The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. The player had to fight the opponent and the 3 monsters in the game. The game we created with this was called Raptoads.
+
+## Gameplay trailer
+
+{{< youtube KfBd1vJM9wI >}}
+
+## My main responsibilities
+
+Besides being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides this I have been responsible for implementing and designing the extensive tooling and pipeline for content creation, content management. The tooling was created in web technologies (electron & SQL Database), this allowed us for quick and rapid iterations. 
+
+
 
 
 | Project Information |                                                              |
 | ------------------- | ------------------------------------------------------------ |
 | Duration:           | 16 Weeks                                                     |
-| Teamsize:           | 11 Programmers, 5 Designers, 8 Artists and 1 Producer        |
+| Team size:          | 11 Programmers, 5 Designers, 8 Artists and 1 Producer        |
 | Roles:              | Tech Lead, Tools programmer, Scrum Master                    |
-| Engine:             | Custom crossplatform C++ Engine with Electron Tooling (Tomorrow Engine) |
+| Engine:             | Custom cross-platform C++ Engine with Electron Tooling (Tomorrow Engine) |
 | Platform:           | Windows, Playstation 4                                       |
 | Languages:          | C++, JavaScript, Lua, SQL                                    |
 | Technologies:       | Lua Scripting, Online Crossplay Multiplayer, Event/HTTP/UI handling with PS4 Support. |

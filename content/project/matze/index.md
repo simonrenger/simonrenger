@@ -3,7 +3,7 @@
 
 title: "Matze (In Development)"
 subtitle: "A learning project written in C# and C++ to practice my API design skills."
-summary: "A cross platform matze generator toolchain written in C# and C++ to practice API design. [more...](/project/matze/)"
+summary: "A cross platform matze generator toolchain written in C# and C++ to practice API design. [more information](/project/matze/)"
 authors: ["admin"]
 tags: ["windows","cpp","linux","csharp"]
 icons: ["logo logo-cpp svg-black","logo logo-csharp svg-black","fab fa-windows text-black","fab fa-linux text-black"]
@@ -42,18 +42,18 @@ image:
 projects: []
 ---
 Matze is my maze generator tool chain consisting out of multiple maze generator algorithms. It contains a command line tool to generate mazes. The command line tool is written in C# (.Net Core).
- 
+
 This project was born to give me a playground to practice API design in C# and C++. The main goal for this project is it to create a similar API in my C++ Lib as well as in my C# lib.
 
 - [Matze C#](https://github.com/simonrenger/matze-csharp).
-- [Matze C++](https://github.com/simonrenger/matze-cpp).
+- [Matze C++](https://github.com/simonrenger/matze-cpp) *(In reimplementation state)*.
 - [Matze Command Line Interface](https://github.com/simonrenger/matze-csharp-cli).
 
 
 | Project Information |                                                       |
 | ------------------- | ----------------------------------------------------- |
 | Type:           | Library, tool chain, CLI                  |
-| Duration:           | January 2019 - Ongoing Development                  |
+| Duration:           | January 2019 - Ongoing Development (1-2 hours per month) |
 | Teamsize:           | 1 Programmer                                         |
 | Roles:              | Maintainer                           |
 | Platform:           | Windows & Linux                                               |

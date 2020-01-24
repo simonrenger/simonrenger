@@ -3,7 +3,7 @@
 
 title: "Seaplane (In Development)"
 subtitle: "A Open World flight exploration game"
-summary: "Seaplane is an open world exploration flight game. Utelizing the new Data-Oriented Technology Stack (DOTS). Set in the Scottish Hebrides. [more...](/project/seaplane/)"
+summary: "Seaplane is an open world exploration flight game. Utelizing the new Data-Oriented Technology Stack (DOTS). Set in the Scottish Hebrides. [more information](/project/seaplane/)"
 authors: ["admin"]
 tags: ["windows","unity"]
 icons: ["logo logo-csharp svg-black","logo logo-unity svg-black","fab fa-windows text-black"]
@@ -30,6 +30,10 @@ projects: []
 ---
 
 In this open world flight game my responsibilities vary from what is needed for the current state of development. Mainly I am focused with tools design and tools programming but also gameplay programming such as the camera. This project allows me to dive into Unity’s new Data-Oriented Technology Stack (DOTS) due to its massive performance promises especially in terms of level streaming.
+
+## My main responsibilities
+
+Making sure that we utilize DOTS to its fullest extent, research into how DOTS can improve our gameplay and allow for benefits. Besides this I am responsible for implementing a quest system with the help of DOTS.
 
 
 | Project Information |                                                       |
