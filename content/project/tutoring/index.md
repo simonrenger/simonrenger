@@ -6,10 +6,11 @@ subtitle: "Teaching C++, C# and other skills to fellow students by giving lectur
 summary: "Besides being a student I am giving lectures and workshops at university about serveral programming related topics: Memory Management, C# for Design an art and organizing the C++ learning community. How to programmer think? [more information](/project/tutoring/)"
 authors: ["admin"]
 tags: ["cpp","teaching","windows"]
-icons: ["logo logo-cpp svg-black","logo logo-csharp svg-black","fas fa-graduation-cap text-black","fab fa-windows text-black","fab fa-playstation text-black"]
+icons: ["logo logo-cpp svg-black","logo logo-csharp svg-black","fab fa-windows text-black","fab fa-playstation text-black"]
+duration: "September 2017 - Present"
+roles: "C++ or Programming Teaching and Mentoring: Workshops and lectures"
 categories: ["portfolio"]
-date: 2018-12-13T21:19:00+01:00
-lastmod: 2019-05-01T21:19:00+01:00
+date: 2018-12-15T21:19:00+01:00
 featured: false
 draft: false
 
@@ -42,4 +43,6 @@ In the last two years I have giving varias lectures and workshop about the follo
 | Allocators are handles to the heap | This workshop introducted the concept of polymorphic memory allocations in C++17 and how to use them as well as how to implement them in C++14. Besides this it was a breif introduction about Memory Management. |
 | C++ speical member function rules  | In this talk I coverted the special member function rules in C++. |
 | C# for designers and artists       | This is a workshop series of 16 weeks in which me and 2 other students teach C# to fellow Design and Art students. We ran this course in year 2 and also in year 3. We iterated on the idea and changed the concept in a Quest based learning evrioment which allowes students to progress on thier own speed, they have an overview on how they progress. We brok C# down into quests in order to learn it. |
+| C++ Memory Managment: Introduction  | In two parts I introduced Memory Managment in C++ and the underlaying concepts. |
+| C++ Memory Managment: Write your own STL compatible allocator | This workshop explained how to implement in C++ 14 a STL compatible polymorphic like allocator and memory resource enviroment. This happend for Windows and Playstation 4. This was hold in 4 parts.|
 

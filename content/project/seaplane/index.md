@@ -1,15 +1,18 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Seaplane (In Development)"
+title: "Skye"
 subtitle: "A Open World flight exploration game"
-summary: "Seaplane is an open world exploration flight game. Utelizing the new Data-Oriented Technology Stack (DOTS). Set in the Scottish Hebrides. [more information](/project/seaplane/)"
+summary: "Skye is an open world exploration flight game. Utilizing the new Data-Oriented Technology Stack (DOTS). Set in the Scottish Hebrides. [more information](/project/seaplane/)"
 authors: ["admin"]
 tags: ["windows","unity"]
 icons: ["logo logo-csharp svg-black","logo logo-unity svg-black","fab fa-windows text-black"]
+duration: "9 Programmers, 12 Designers, 8 Artists and 1 Producer"
+team: "3 Programmers"
+roles: "Tools programmer"
+Engine: "Unity & DOTS HPC#"
 categories: ["portfolio"]
 date: 2019-09-29T15:10:00+01:00
-lastmod: 2019-12-14T21:19:00+01:00
 featured: false
 draft: false
 

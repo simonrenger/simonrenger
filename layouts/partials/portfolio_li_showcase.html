@@ -44,13 +44,46 @@
         {{ . }}
       </div>
       {{ end }}
-
-      <div style="font-size:32px;">
-       {{range $icon := $item.Params.icons}}
-       <i class="{{$icon}}"></i>
-       {{end}}
-      </div>
-
+      <h4>Quick Facts</h4>
+      <table>
+        <tbody>
+          {{- if $item.Params.Duration}}
+          <tr>
+          <td style="vertical-align:top;"><b>Duration</b></td>
+          <td style="padding-left:2em;">{{$item.Params.Duration}}</td>
+        </tr>
+        {{end -}}
+        {{- if $item.Params.Roles}}
+        <tr>
+          <td style="vertical-align:top;"><b>Roles</b></td>
+          <td style="padding-left:2em;">{{$item.Params.Roles}}</td>
+        </tr>
+        {{end -}}
+        {{- if $item.Params.Engine}}
+        <tr>
+          <td style="vertical-align:top;"><b>Engine</b></td>
+          <td style="padding-left:2em;">{{$item.Params.Engine}}</td>
+        </tr>
+        {{end -}}
+        {{- if $item.Params.Team}}
+        <tr>
+          <td style="vertical-align:top;"><b>Team</b></td>
+          <td style="padding-left:2em;">{{$item.Params.Team}}</td>
+        </tr>
+        {{end -}}
+        {{- if $item.Params.icons}}
+        <tr>
+          <td style="vertical-align:top;"><b>Technologies</b></td>
+          <td style="padding-left:2em;">
+            <div style="font-size:32px;">
+              {{range $icon := $item.Params.icons}}
+              <i class="{{$icon}}"></i>
+              {{end}}
+             </div>          
+          </td>
+        </tr>
+        {{end -}}
+      </tbody></table>
       <div class="btn-links">
         {{ partial "page_links" (dict "page" $item "is_list" 0) }}
       </div>

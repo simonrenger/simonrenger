@@ -9,9 +9,8 @@ tags: ["windows","cpp","linux","csharp"]
 icons: ["logo logo-cpp svg-black","logo logo-csharp svg-black","fab fa-windows text-black","fab fa-linux text-black"]
 categories: ["portfolio"]
 date: 2019-01-01T10:10:00+01:00
-lastmod: 2019-09-14T11:19:00+01:00
 featured: false
-draft: false
+draft: true
 links: 
   - icon_pack: "fab"
     icon: "github"

@@ -7,9 +7,12 @@ summary: "A wave based shooter prototype created in 2 weeks, created in Unreal E
 authors: ["admin"]
 tags: ["windows","prototype","ue4"]
 icons: ["logo logo-ue4 svg-black","fab fa-windows text-black"]
+duration: "2 Weeks"
+team: "2 Programmers, 4 Designers, 3 Artists"
+roles: "Producer and Programmer"
+Engine: "Unreal Engine"
 categories: ["portfolio"]
 date: 2018-12-14T21:19:00+01:00
-lastmod: 2019-04-14T21:19:00+01:00
 featured: true
 draft: false
 
@@ -36,7 +39,7 @@ Mars Escape is a wave based shooter prototype created in Unreal Engine 4. Beside
 | Type:           | Wave based Shooter - **Prototype**                               |
 | Duration:           | 2 Weeks                               |
 | Teamsize:           | 2 Programmers, 4 Designers, 3 Artists |
-| Roles:              | Producer                              |
+| Roles:              | Producer, Programmer                             |
 | Engine:             | Unreal Engine                         |
 | Platform:           | Windows                               |
 | Languages:          | Blueprints                            |

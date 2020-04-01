@@ -17,19 +17,19 @@ subtitle = ""
 [[feature]]
   icon = "windows text-black"
   icon_pack = "fab"
-  name = "Windows"
+  name = "Windows Development"
   description = "10 years"  
   
 [[feature]]
-  icon = "suse text-black"
+  icon = "linux text-black"
   icon_pack = "fab"
-  name = "OpenSUSE Linux"
+  name = "Linux Development"
   description = "8 years"
 
 [[feature]]
   icon = "playstation text-black"
   icon_pack = "fab"
-  name = "Playstation"
+  name = "Playstation Development"
   description = "1 year"
 
 [[feature]]

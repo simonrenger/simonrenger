@@ -7,9 +7,12 @@ summary: "A multiplayer RTS game written in C++ with data oriented design in min
 authors: ["admin"]
 tags: ["windows","cpp","linux","networking"]
 icons: ["logo logo-cpp svg-black","logo logo-cmake svg-black","fab fa-github text-black","fab fa-windows text-black","fab fa-linux text-black"]
+duration: "Decemeber 2019 - Ongoing Development"
+team: "3 Programmers"
+roles: "QA Engineer, Engine & Network programmer"
+Engine: "Eyos Custom Game Framework (C++)"
 categories: ["portfolio"]
 date: 2019-12-01T15:10:00+01:00
-lastmod: 2019-12-14T21:19:00+01:00
 featured: false
 draft: false
 
