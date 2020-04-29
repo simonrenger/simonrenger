@@ -7,8 +7,9 @@ summary: "Skye is an open world exploration flight game. Utilizing the new Data-
 authors: ["admin"]
 tags: ["windows","unity"]
 icons: ["logo logo-csharp svg-black","logo logo-unity svg-black","fab fa-windows text-black"]
-duration: "9 Programmers, 12 Designers, 8 Artists and 1 Producer"
-team: "3 Programmers"
+duration: "September 2019 - January 2020"
+Focus: "General Gameplay programming & DOTS Tooling: VS Extension"
+team: "9 Programmers, 12 Designers, 8 Artists and 1 Producer"
 roles: "Tools programmer"
 Engine: "Unity & DOTS HPC#"
 categories: ["portfolio"]
@@ -36,13 +37,13 @@ In this open world flight game my responsibilities vary from what is needed for 
 
 ## My main responsibilities
 
-Making sure that we utilize DOTS to its fullest extent, research into how DOTS can improve our gameplay and allow for benefits. Besides this I am responsible for implementing a quest system with the help of DOTS.
+Making sure that we utilize DOTS to its fullest extent, research into how DOTS can improve our gameplay and allow for benefits. Besides, I am responsible for implementing a quest system with the help of DOTS.
 
 
 | Project Information |                                                       |
 | ------------------- | ----------------------------------------------------- |
 | Type:           | Open World flight simulation game with focus on exploration an living world.                 |
-| Duration:           | September 2019 - Ongoing Development                  |
+| Duration:           | September 2019 - January 2020                  |
 | Teamsize:           | 9 Programmers, 12 Designers, 8 Artists and 1 Producer |
 | Roles:              | Tools programmer                                      |
 | Engine:             | Unity                                                 |
@@ -52,5 +53,5 @@ Making sure that we utilize DOTS to its fullest extent, research into how DOTS c
 
 | Project Highlights                                           |
 | ------------------------------------------------------------ |
-| We're utilizing the new data oriented systems (DOTS) to allow a better open-world experience. |
+| We are utilizing the new data oriented systems (DOTS) to allow a better open-world experience. |
 

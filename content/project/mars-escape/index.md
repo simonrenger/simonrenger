@@ -11,6 +11,7 @@ duration: "2 Weeks"
 team: "2 Programmers, 4 Designers, 3 Artists"
 roles: "Producer and Programmer"
 Engine: "Unreal Engine"
+Focus: "Production"
 categories: ["portfolio"]
 date: 2018-12-14T21:19:00+01:00
 featured: true
@@ -32,7 +33,7 @@ image:
 projects: []
 ---
 
-Mars Escape is a wave based shooter prototype created in Unreal Engine 4. Besides my responsibilities as producer I have helped implementing the gameplay system in Blueprints. This project has tought me a lot about project managment and teamwork as well as rapid prototyping.
+Mars Escape is a wave based shooter prototype created in Unreal Engine 4. Besides my responsibilities as producer I have helped implementing the gameplay system in Blueprints. This project has taught me a lot about project management and teamwork as well as rapid prototyping.
 
 | Project Information |                                       |
 | ------------------- | ------------------------------------- |

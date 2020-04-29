@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Engine and Tools programming Student
+role: Engine and Tools / Network programming Student
 
 # Organizations/Affiliations
 organizations:
@@ -21,7 +21,7 @@ organizations:
 bio: Write programs that do one thing and do it well. Write programs to work together — McIlroy Unix philosophy
 
 interests:
-- Low level C++ (Memory Managment & Network)
+- Network programming
 - Tools programming
 - Teaching C++
 
@@ -56,6 +56,6 @@ email: "simon.renger@gmail.com"
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
 ---
-I am Simon, a Game Programming student at Breda University of Applied Sciences, The Netherlands. I am striving for new opportunities to learn and innovate. I love my work as much as I love sharing knowledge with others. I do not shy away from a challenge that involves picking up different roles that move a project forward. I am mainly interested in backend system design as well as tool programming. I am striving towards becoming an engine and tools programmer in the future.
+I am Simon, a Game Programming student at Breda University of Applied Sciences, The Netherlands. I am striving for new opportunities to learn and innovate. I love my work as much as I love sharing knowledge with others. I do not shy away from a challenge that involves picking up different roles that move a project forward. I am mainly interested in backend system design as well as tool programming. I am striving towards becoming an engine and tools / network programmer in the future.
 
 **I am looking for an internship starting September 2020.**

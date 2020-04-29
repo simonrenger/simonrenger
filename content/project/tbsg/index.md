@@ -10,6 +10,7 @@ icons: ["logo logo-cpp svg-black","logo logo-lua svg-black","fab fa-js text-blac
 duration: "16 Weeks - February to July 2019"
 team: "1 Programmers, 5 Designers, 8 Artists and 1 Producer"
 roles: "Tech Lead, Tools programmer, Scrum Master"
+Focus: "Core Architecture Design, Framework Tooling in Electron: Content Editor"
 Engine: "Custom cross-platform C++ Engine (Windows and PS4) with Electron Tooling (Tomorrow Engine) "
 categories: ["portfolio"]
 date: 2019-05-01T20:19:00+01:00
@@ -40,20 +41,20 @@ The tomorrow engine is a cross platform C++ game framework which allows the crea
 
 ## My main responsibilities
 
-Besides being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides this I have been responsible for implementing and designing the extensive tooling and pipeline for content creation, content management. The tooling was created in web technologies (electron & SQL Database), this allowed us for quick and rapid iterations.
+Apart from being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides, I have been responsible for implementing and designing the extensive tooling and pipeline for content creation and content management. The tooling was created in web technologies (electron & SQL Database), which allowed us for quick and rapid iterations.
 
 ### Core Architecture
 
-The application were split into four different modules. The Framework (TBSG) which served the Client as well as the Server with the basic utilities. Besides this we have the Network layers as its own lib. 
+The application was split into four different modules. The Framework (TBSG) served the Client as well as the Server with basic utilities. Besides, we had the Network layer.
 
-When designing the modules I kept the guideline that the architecture shall be for our game type specific: _determinstic linear card games_. That is why I chose for a "data oriented" approche with packing related data closely together.
+When designing the modules, I followed the architecture guideline for our game: _determinstic linear card games_. That resulted in a "data oriented" approach.
 
 ### Tooling - The Hub
 
 The framework came with its own tooling which was written in JavaScript and Electron. It served as the main content creation tool for Designers. The tool offered the following functions:
 
 - AI Optimization for the QA Test games
-- Modifiying the underlaying content database (SQL)
+- Modifiying the underlying content database (SQL)
 - source contol of our Lua card scripts
 - UI Editor
 - Lua Script validation

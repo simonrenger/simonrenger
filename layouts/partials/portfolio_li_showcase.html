@@ -47,6 +47,12 @@
       <h4>Quick Facts</h4>
       <table>
         <tbody>
+          {{- if $item.Params.Focus}}
+          <tr>
+            <td style="vertical-align:top;"><b>Main Focus:</b></td>
+            <td style="padding-left:2em;">{{$item.Params.Focus}}</td>
+          </tr>
+          {{end -}}
           {{- if $item.Params.Duration}}
           <tr>
           <td style="vertical-align:top;"><b>Duration</b></td>
