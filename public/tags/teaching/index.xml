@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>teaching | Simon Renger</title>
+    <link>/tags/teaching/</link>
+      <atom:link href="/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>teaching</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Sat, 15 Dec 2018 21:19:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>teaching</title>
+      <link>/tags/teaching/</link>
+    </image>
+    
+    <item>
+      <title>Tutoring</title>
+      <link>/project/tutoring/</link>
+      <pubDate>Sat, 15 Dec 2018 21:19:00 +0100</pubDate>
+      <guid>/project/tutoring/</guid>
+      <description>&lt;p&gt;I have been giving workshops and lectures since my second year at the university. This is a great way of learning new skills and sharing the gained knowlegde with others. It also allows for a great flow of feedback. This is why I initiated the C++ learning comminity at our school (called C++ Guild)&lt;/p&gt;
+&lt;p&gt;In the last two years I have been giving various lectures and workshops on the following topics:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Lecture / Workshop&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;How do programmers think?&lt;/td&gt;
+&lt;td&gt;A lecture which uses minecraft to illustrate how abstract thinking works as well as how we can improve communication internally.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ type deduction&lt;/td&gt;
+&lt;td&gt;In three workshops I have covered the basics of the C++  type deduction: template type deduction, auto type deduction, decltype deduction, decltype auto deduction, lambda type deduction.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Compiler and linker steps&lt;/td&gt;
+&lt;td&gt;This presentation explained the compiler steps in C++ and the linker steps.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Allocators are handles to the heap&lt;/td&gt;
+&lt;td&gt;This workshop introduced the concept of polymorphic memory allocations in C++17 and how to use them as well as how to implement them in C++14. Besides, there was a brief introduction on Memory Management.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ special member function rules&lt;/td&gt;
+&lt;td&gt;In this talk I covered the special member function rules in C++.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C# for designers and artists&lt;/td&gt;
+&lt;td&gt;This is a workshop series of 16 weeks in which me and 2 other students taught C# to fellow Design and Art students. We ran this course in year 2 and also in year 3. We iterated on the idea and changed the concept to a Quest-based learning environment. This allows students to progress at their own pace because they have an overview on how they progress.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Memory Managment: Introduction&lt;/td&gt;
+&lt;td&gt;In two parts I introduced Memory Managment in C++ and the underlying concepts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Memory Managment: Write your own STL compatible allocator&lt;/td&gt;
+&lt;td&gt;This workshop explained how to implement in C++ 14 an STL compatible polymorphic like allocator and memory resource environment. This workshop was targeted for Windows and Playstation 4 and was held in 4 parts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

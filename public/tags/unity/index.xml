@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unity | Simon Renger</title>
+    <link>/tags/unity/</link>
+      <atom:link href="/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <description>unity</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Sun, 29 Sep 2019 15:10:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>unity</title>
+      <link>/tags/unity/</link>
+    </image>
+    
+    <item>
+      <title>Skye</title>
+      <link>/project/seaplane/</link>
+      <pubDate>Sun, 29 Sep 2019 15:10:00 +0100</pubDate>
+      <guid>/project/seaplane/</guid>
+      <description>&lt;p&gt;In this open world flight game my responsibilities vary from what is needed for the current state of development. Mainly I am focused with tools design and tools programming but also gameplay programming such as the camera. This project allows me to dive into Unity’s new Data-Oriented Technology Stack (DOTS) due to its massive performance promises especially in terms of level streaming.&lt;/p&gt;
+&lt;h2 id=&#34;my-main-responsibilities&#34;&gt;My main responsibilities&lt;/h2&gt;
+&lt;p&gt;Making sure that we utilize DOTS to its fullest extent, research into how DOTS can improve our gameplay and allow for benefits. Besides, I am responsible for implementing a quest system with the help of DOTS.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Information&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Type:&lt;/td&gt;
+&lt;td&gt;Open World flight simulation game with focus on exploration an living world.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duration:&lt;/td&gt;
+&lt;td&gt;September 2019 - January 2020&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Teamsize:&lt;/td&gt;
+&lt;td&gt;9 Programmers, 12 Designers, 8 Artists and 1 Producer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Roles:&lt;/td&gt;
+&lt;td&gt;Tools programmer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Engine:&lt;/td&gt;
+&lt;td&gt;Unity&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform:&lt;/td&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Languages:&lt;/td&gt;
+&lt;td&gt;C#&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technologies:&lt;/td&gt;
+&lt;td&gt;Unity DOTS, Visual Studio, Jenkins, Perforce&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Highlights&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;We are utilizing the new data oriented systems (DOTS) to allow a better open-world experience.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

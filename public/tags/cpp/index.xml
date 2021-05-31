@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpp | Simon Renger</title>
+    <link>/tags/cpp/</link>
+      <atom:link href="/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <description>cpp</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Sun, 01 Dec 2019 15:10:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>cpp</title>
+      <link>/tags/cpp/</link>
+    </image>
+    
+    <item>
+      <title>Eyos (In Development)</title>
+      <link>/project/eyos/</link>
+      <pubDate>Sun, 01 Dec 2019 15:10:00 +0100</pubDate>
+      <guid>/project/eyos/</guid>
+      <description>&lt;p&gt;Eyos is a cross platform (Windows and Linux) targeting 2D multiplayer RTS focused on managing a massive amount of units. I see this project as a chance to enhance and challenge my network programming skills as well as my software engineering skills. The development of this project is open and can be found on &lt;a href=&#34;https://github.com/Eothaun/Eyos&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;my-main-responsibilities&#34;&gt;My main responsibilities&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The network architecture&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am in charge for the network architecture which supports the synchronization of millions of entities via the network. The chosen architecture is a &lt;em&gt;peer to peerish&lt;/em&gt; server-client approach, with deterministic lock step, as described in the article &lt;a href=&#34;https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php&#34;&gt;Age of Empire Network Architecture&lt;/a&gt; and in the book &lt;em&gt;Architecting Networked Games by Joshua L. Glazer and Sanjay Madhav&lt;/em&gt;. The host starts up a dedicated server on their machine and that one confirms the gameplay.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;QA Pipeline&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am working with GitHub Actions. It verifies that our game can be built on Windows (&lt;code&gt;msvc&lt;/code&gt;) and Linux (our test environment is Ubuntu) with GCC9 and Clang9 tool chain. Our code gets also tested and verified with clang-tidy and clang format every time someone pushes. Besides, &lt;code&gt;ctest&lt;/code&gt; runs our unit tests (Catch2).&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Information&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Type:&lt;/td&gt;
+&lt;td&gt;Networking RTS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duration:&lt;/td&gt;
+&lt;td&gt;Decemeber 2019 - Ongoing Development&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Teamsize:&lt;/td&gt;
+&lt;td&gt;3 Programmers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Roles:&lt;/td&gt;
+&lt;td&gt;QA Engineer, Engine &amp;amp; Network programmer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Engine:&lt;/td&gt;
+&lt;td&gt;Eyos Custom Game Framework&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform:&lt;/td&gt;
+&lt;td&gt;Windows &amp;amp; Linux&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Languages:&lt;/td&gt;
+&lt;td&gt;C++&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technologies:&lt;/td&gt;
+&lt;td&gt;cmake, clang &amp;amp; msvc, git, bgfx, GitHub Actions, hack&amp;rsquo;n plan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;github-card&#34; data-github=&#34;Eothaun/Eyos&#34; data-width=&#34;400&#34; data-height=&#34;153&#34; data-theme=&#34;default&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Imposter Effect Lightning Talk Meetingcpp 2019</title>
+      <link>/talk/imposter-effect-lightning-talk-meetingcpp19/</link>
+      <pubDate>Fri, 15 Nov 2019 20:50:00 +0100</pubDate>
+      <guid>/talk/imposter-effect-lightning-talk-meetingcpp19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>“Tomorrow Engine“</title>
+      <link>/project/tbsg/</link>
+      <pubDate>Wed, 01 May 2019 20:19:00 +0100</pubDate>
+      <guid>/project/tbsg/</guid>
+      <description>&lt;p&gt;The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. The player had to fight the opponent and the 3 monsters in the game. The game we created with this was called Raptoads. The Framework supported Playstation 4 and Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;gameplay-trailer&#34;&gt;Gameplay trailer&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KfBd1vJM9wI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;my-main-responsibilities&#34;&gt;My main responsibilities&lt;/h2&gt;
+&lt;p&gt;Apart from being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides, I have been responsible for implementing and designing the extensive tooling and pipeline for content creation and content management. The tooling was created in web technologies (electron &amp;amp; SQL Database), which allowed us for quick and rapid iterations.&lt;/p&gt;
+&lt;h3 id=&#34;core-architecture&#34;&gt;Core Architecture&lt;/h3&gt;
+&lt;p&gt;The application was split into four different modules. The Framework (TBSG) served the Client as well as the Server with basic utilities. Besides, we had the Network layer.&lt;/p&gt;
+&lt;p&gt;When designing the modules, I followed the architecture guideline for our game: &lt;em&gt;determinstic linear card games&lt;/em&gt;. That resulted in a &amp;ldquo;data oriented&amp;rdquo; approach.&lt;/p&gt;
+&lt;h3 id=&#34;tooling---the-hub&#34;&gt;Tooling - The Hub&lt;/h3&gt;
+&lt;p&gt;The framework came with its own tooling which was written in JavaScript and Electron. It served as the main content creation tool for Designers. The tool offered the following functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI Optimization for the QA Test games&lt;/li&gt;
+&lt;li&gt;Modifiying the underlying content database (SQL)&lt;/li&gt;
+&lt;li&gt;source contol of our Lua card scripts&lt;/li&gt;
+&lt;li&gt;UI Editor&lt;/li&gt;
+&lt;li&gt;Lua Script validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Information&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Duration:&lt;/td&gt;
+&lt;td&gt;16 Weeks - February to July 2019&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Team size:&lt;/td&gt;
+&lt;td&gt;11 Programmers, 5 Designers, 8 Artists and 1 Producer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Roles:&lt;/td&gt;
+&lt;td&gt;Tech Lead, Tools programmer, Scrum Master&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Engine:&lt;/td&gt;
+&lt;td&gt;Custom cross-platform C++ Engine with Electron Tooling (Tomorrow Engine)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform:&lt;/td&gt;
+&lt;td&gt;Windows, Playstation 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Languages:&lt;/td&gt;
+&lt;td&gt;C++, JavaScript, Lua, SQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technologies:&lt;/td&gt;
+&lt;td&gt;Lua Scripting, Online Crossplay Multiplayer, Event/HTTP/UI handling with PS4 Support.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Highlights&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Scripting Pipeline: A Lua dialect which allowed designers to quickly develop with our tooling the card behaviour.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scripting source control integration - via the tooling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive integration &amp;amp; Sheets&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Utility AI - custimizeble via the tooling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Custom Tooling written with Web technologies for quick iterations, tool of choice: Electron &amp;amp; MariaDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Playstation 4 Support: The engine supported Playstation 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tutoring</title>
+      <link>/project/tutoring/</link>
+      <pubDate>Sat, 15 Dec 2018 21:19:00 +0100</pubDate>
+      <guid>/project/tutoring/</guid>
+      <description>&lt;p&gt;I have been giving workshops and lectures since my second year at the university. This is a great way of learning new skills and sharing the gained knowlegde with others. It also allows for a great flow of feedback. This is why I initiated the C++ learning comminity at our school (called C++ Guild)&lt;/p&gt;
+&lt;p&gt;In the last two years I have been giving various lectures and workshops on the following topics:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Lecture / Workshop&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;How do programmers think?&lt;/td&gt;
+&lt;td&gt;A lecture which uses minecraft to illustrate how abstract thinking works as well as how we can improve communication internally.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ type deduction&lt;/td&gt;
+&lt;td&gt;In three workshops I have covered the basics of the C++  type deduction: template type deduction, auto type deduction, decltype deduction, decltype auto deduction, lambda type deduction.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Compiler and linker steps&lt;/td&gt;
+&lt;td&gt;This presentation explained the compiler steps in C++ and the linker steps.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Allocators are handles to the heap&lt;/td&gt;
+&lt;td&gt;This workshop introduced the concept of polymorphic memory allocations in C++17 and how to use them as well as how to implement them in C++14. Besides, there was a brief introduction on Memory Management.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ special member function rules&lt;/td&gt;
+&lt;td&gt;In this talk I covered the special member function rules in C++.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C# for designers and artists&lt;/td&gt;
+&lt;td&gt;This is a workshop series of 16 weeks in which me and 2 other students taught C# to fellow Design and Art students. We ran this course in year 2 and also in year 3. We iterated on the idea and changed the concept to a Quest-based learning environment. This allows students to progress at their own pace because they have an overview on how they progress.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Memory Managment: Introduction&lt;/td&gt;
+&lt;td&gt;In two parts I introduced Memory Managment in C++ and the underlying concepts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C++ Memory Managment: Write your own STL compatible allocator&lt;/td&gt;
+&lt;td&gt;This workshop explained how to implement in C++ 14 an STL compatible polymorphic like allocator and memory resource environment. This workshop was targeted for Windows and Playstation 4 and was held in 4 parts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

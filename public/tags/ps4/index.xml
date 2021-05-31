@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ps4 | Simon Renger</title>
+    <link>/tags/ps4/</link>
+      <atom:link href="/tags/ps4/index.xml" rel="self" type="application/rss+xml" />
+    <description>ps4</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Wed, 01 May 2019 20:19:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>ps4</title>
+      <link>/tags/ps4/</link>
+    </image>
+    
+    <item>
+      <title>“Tomorrow Engine“</title>
+      <link>/project/tbsg/</link>
+      <pubDate>Wed, 01 May 2019 20:19:00 +0100</pubDate>
+      <guid>/project/tbsg/</guid>
+      <description>&lt;p&gt;The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. The player had to fight the opponent and the 3 monsters in the game. The game we created with this was called Raptoads. The Framework supported Playstation 4 and Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;gameplay-trailer&#34;&gt;Gameplay trailer&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KfBd1vJM9wI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;my-main-responsibilities&#34;&gt;My main responsibilities&lt;/h2&gt;
+&lt;p&gt;Apart from being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides, I have been responsible for implementing and designing the extensive tooling and pipeline for content creation and content management. The tooling was created in web technologies (electron &amp;amp; SQL Database), which allowed us for quick and rapid iterations.&lt;/p&gt;
+&lt;h3 id=&#34;core-architecture&#34;&gt;Core Architecture&lt;/h3&gt;
+&lt;p&gt;The application was split into four different modules. The Framework (TBSG) served the Client as well as the Server with basic utilities. Besides, we had the Network layer.&lt;/p&gt;
+&lt;p&gt;When designing the modules, I followed the architecture guideline for our game: &lt;em&gt;determinstic linear card games&lt;/em&gt;. That resulted in a &amp;ldquo;data oriented&amp;rdquo; approach.&lt;/p&gt;
+&lt;h3 id=&#34;tooling---the-hub&#34;&gt;Tooling - The Hub&lt;/h3&gt;
+&lt;p&gt;The framework came with its own tooling which was written in JavaScript and Electron. It served as the main content creation tool for Designers. The tool offered the following functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI Optimization for the QA Test games&lt;/li&gt;
+&lt;li&gt;Modifiying the underlying content database (SQL)&lt;/li&gt;
+&lt;li&gt;source contol of our Lua card scripts&lt;/li&gt;
+&lt;li&gt;UI Editor&lt;/li&gt;
+&lt;li&gt;Lua Script validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Information&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Duration:&lt;/td&gt;
+&lt;td&gt;16 Weeks - February to July 2019&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Team size:&lt;/td&gt;
+&lt;td&gt;11 Programmers, 5 Designers, 8 Artists and 1 Producer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Roles:&lt;/td&gt;
+&lt;td&gt;Tech Lead, Tools programmer, Scrum Master&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Engine:&lt;/td&gt;
+&lt;td&gt;Custom cross-platform C++ Engine with Electron Tooling (Tomorrow Engine)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Platform:&lt;/td&gt;
+&lt;td&gt;Windows, Playstation 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Languages:&lt;/td&gt;
+&lt;td&gt;C++, JavaScript, Lua, SQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technologies:&lt;/td&gt;
+&lt;td&gt;Lua Scripting, Online Crossplay Multiplayer, Event/HTTP/UI handling with PS4 Support.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project Highlights&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Scripting Pipeline: A Lua dialect which allowed designers to quickly develop with our tooling the card behaviour.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scripting source control integration - via the tooling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Drive integration &amp;amp; Sheets&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Utility AI - custimizeble via the tooling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Custom Tooling written with Web technologies for quick iterations, tool of choice: Electron &amp;amp; MariaDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Playstation 4 Support: The engine supported Playstation 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
