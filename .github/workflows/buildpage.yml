@@ -1,21 +1,18 @@
 name: github pages
-
 on:
   workflow_dispatch:
     branches:
       - master
-
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout website
-      uses: actions/checkout@v2
-      with:
-        path: website
-        repository: simonrenger/website
-        token: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: Checkout website
+        uses: actions/checkout@v2
+        with:
+          path: website
+          repository: simonrenger/website
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
