@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ue4 | Simon Renger</title><link>/tags/ue4/</link><atom:link href="/tags/ue4/index.xml" rel="self" type="application/rss+xml"/><description>ue4</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Thu, 16 Apr 2020 00:10:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>ue4</title><link>/tags/ue4/</link></image><item><title>Kari (In Development)</title><link>/project/kari/</link><pubDate>Thu, 16 Apr 2020 00:10:00 +0100</pubDate><guid>/project/kari/</guid><description>&lt;p>Kari is a single player, adventure game in which you are stuck on the island of the Nordic gods. It is your job to complete quests given by the gods and the islands inhabitants in order to rebuild your boat.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/lthr3OE43MI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;blockquote>
+&lt;p>Game teaser, basic game overview&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="my-main-responsibilities">My main responsibilities&lt;/h2>
+&lt;p>I am mainly responsible for the QA pipeline and the Jenkins set up. I created a &lt;a href="https://github.com/simonrenger/jenkinsUtils">Jenkins Utility library&lt;/a>. This Jenkins groovy script collection helps us create the QA pipeline we want on the school&amp;rsquo;s Jenkins server. The library contains a collection of functions to communicate with Helix Swarm, Mantis and Discord. It supports the automated testing pipeline in Unreal Engine. Furthermore, it can pack and build UE4 projects.&lt;/p>
+&lt;p>Besides, I have created a prototype of a Commit Testing Tool in WPF (Windows Presentation Foundation) and &lt;a href="http://materialdesigninxaml.net/">Material Design for WPF&lt;/a>.&lt;/p>
+&lt;h2 id="p4committester---prototype">P4CommitTester - prototype&lt;/h2>
+&lt;p>The purpose of this tool is it to test local or online Perforce changelists before they can be submitted or turned into a Swarm review. The tool has a simple &lt;code>toml&lt;/code> configuration file in which the automated tests can be specified (e.g. unit tests, map tests/ funcionality tests).&lt;/p>
+&lt;p>One can also define pre/post steps. They will be executed before the actual tests run e.g. shelve all other changelists. This set up makes it possible for the tool to work with any kind of engine or software. When tests are finished, the tool will check the return code of the application and react appropriately (most test applications return &lt;code>EXIT_FAILURE&lt;/code> on failure).&lt;/p>
+&lt;p>Currently, the tool can only communicate with the Jenkins API to run online tests / builds.&lt;/p>
+&lt;h3 id="images">Images&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Changelist Overview&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;img src="/img/commits.png" alt="commit selection">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>List of all possible changelists. The default changelist is excluded because it is not really a changelist.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Selected Changelist Details&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;img src="/img/commitview.png" alt="commit selection">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>You can shelve (if it is a shelved changelist), unshelve and test the current changelist.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Test configuration&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;img src="/img/tests.png" alt="configure tests">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Toml file to configure the tool to run tests.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Test Results&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;img src="/img/tests_ok.png" alt="configure tests">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>In case the tests were ok the user can create a review or commit directly. If they were not successful the user would find the log here.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="project-overview">Project Overview&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project Information&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Type:&lt;/td>
+&lt;td>Single player, adventure game&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Duration:&lt;/td>
+&lt;td>September 2019 - Ongoing Development&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Teamsize:&lt;/td>
+&lt;td>6 programmers, 10 designers, 12 artists, 1 producer&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Roles:&lt;/td>
+&lt;td>QA &amp;amp; Tools engineer&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Engine:&lt;/td>
+&lt;td>Unreal Engine&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Platform:&lt;/td>
+&lt;td>Windows&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Languages:&lt;/td>
+&lt;td>C++, Jenkins Groovy, C#&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Technologies:&lt;/td>
+&lt;td>Jenkins, Visual Studio, C# UWP, C# WPF&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Mars Escape</title><link>/project/mars-escape/</link><pubDate>Fri, 14 Dec 2018 21:19:00 +0100</pubDate><guid>/project/mars-escape/</guid><description>&lt;p>Mars Escape is a wave based shooter prototype created in Unreal Engine 4. Besides my responsibilities as producer I have helped implementing the gameplay system in Blueprints. This project has taught me a lot about project management and teamwork as well as rapid prototyping.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project Information&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Type:&lt;/td>
+&lt;td>Wave based Shooter - &lt;strong>Prototype&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Duration:&lt;/td>
+&lt;td>2 Weeks&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Teamsize:&lt;/td>
+&lt;td>2 Programmers, 4 Designers, 3 Artists&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Roles:&lt;/td>
+&lt;td>Producer, Programmer&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Engine:&lt;/td>
+&lt;td>Unreal Engine&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Platform:&lt;/td>
+&lt;td>Windows&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Languages:&lt;/td>
+&lt;td>Blueprints&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

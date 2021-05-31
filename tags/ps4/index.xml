@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ps4 | Simon Renger</title><link>/tags/ps4/</link><atom:link href="/tags/ps4/index.xml" rel="self" type="application/rss+xml"/><description>ps4</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Wed, 01 May 2019 20:19:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>ps4</title><link>/tags/ps4/</link></image><item><title>“Tomorrow Engine“</title><link>/project/tbsg/</link><pubDate>Wed, 01 May 2019 20:19:00 +0100</pubDate><guid>/project/tbsg/</guid><description>&lt;p>The tomorrow engine is a cross platform C++ game framework which allows the creation of deterministic linear card games. The player had to fight the opponent and the 3 monsters in the game. The game we created with this was called Raptoads. The Framework supported Playstation 4 and Windows 10.&lt;/p>
+&lt;h2 id="gameplay-trailer">Gameplay trailer&lt;/h2>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/KfBd1vJM9wI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h2 id="my-main-responsibilities">My main responsibilities&lt;/h2>
+&lt;p>Apart from being the Tech lead / Team lead of the 11 programmers, I have been in charge for the core architecture. Besides, I have been responsible for implementing and designing the extensive tooling and pipeline for content creation and content management. The tooling was created in web technologies (electron &amp;amp; SQL Database), which allowed us for quick and rapid iterations.&lt;/p>
+&lt;h3 id="core-architecture">Core Architecture&lt;/h3>
+&lt;p>The application was split into four different modules. The Framework (TBSG) served the Client as well as the Server with basic utilities. Besides, we had the Network layer.&lt;/p>
+&lt;p>When designing the modules, I followed the architecture guideline for our game: &lt;em>determinstic linear card games&lt;/em>. That resulted in a &amp;ldquo;data oriented&amp;rdquo; approach.&lt;/p>
+&lt;h3 id="tooling---the-hub">Tooling - The Hub&lt;/h3>
+&lt;p>The framework came with its own tooling which was written in JavaScript and Electron. It served as the main content creation tool for Designers. The tool offered the following functions:&lt;/p>
+&lt;ul>
+&lt;li>AI Optimization for the QA Test games&lt;/li>
+&lt;li>Modifiying the underlying content database (SQL)&lt;/li>
+&lt;li>source contol of our Lua card scripts&lt;/li>
+&lt;li>UI Editor&lt;/li>
+&lt;li>Lua Script validation&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project Information&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Duration:&lt;/td>
+&lt;td>16 Weeks - February to July 2019&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Team size:&lt;/td>
+&lt;td>11 Programmers, 5 Designers, 8 Artists and 1 Producer&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Roles:&lt;/td>
+&lt;td>Tech Lead, Tools programmer, Scrum Master&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Engine:&lt;/td>
+&lt;td>Custom cross-platform C++ Engine with Electron Tooling (Tomorrow Engine)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Platform:&lt;/td>
+&lt;td>Windows, Playstation 4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Languages:&lt;/td>
+&lt;td>C++, JavaScript, Lua, SQL&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Technologies:&lt;/td>
+&lt;td>Lua Scripting, Online Crossplay Multiplayer, Event/HTTP/UI handling with PS4 Support.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Project Highlights&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Scripting Pipeline: A Lua dialect which allowed designers to quickly develop with our tooling the card behaviour.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Scripting source control integration - via the tooling&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Google Drive integration &amp;amp; Sheets&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Utility AI - custimizeble via the tooling&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Custom Tooling written with Web technologies for quick iterations, tool of choice: Electron &amp;amp; MariaDB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Playstation 4 Support: The engine supported Playstation 4&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>
