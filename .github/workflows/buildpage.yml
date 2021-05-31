@@ -20,6 +20,8 @@ jobs:
           extended: true
       - name: Build
         run: cd website  && hugo --minify
+      - name: add CNAME
+        run: echo "www.simonrenger.de" > CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
