@@ -1,50 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux | Simon Renger</title><link>/tags/linux/</link><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml"/><description>linux</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Sun, 01 Dec 2019 15:10:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>linux</title><link>/tags/linux/</link></image><item><title>Eyos (In Development)</title><link>/project/eyos/</link><pubDate>Sun, 01 Dec 2019 15:10:00 +0100</pubDate><guid>/project/eyos/</guid><description>&lt;p>Eyos is a cross platform (Windows and Linux) targeting 2D multiplayer RTS focused on managing a massive amount of units. I see this project as a chance to enhance and challenge my network programming skills as well as my software engineering skills. The development of this project is open and can be found on &lt;a href="https://github.com/Eothaun/Eyos">GitHub&lt;/a>.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux | Simon Renger</title><link>/tags/linux/</link><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml"/><description>linux</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Tue, 01 Jun 2021 14:10:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>linux</title><link>/tags/linux/</link></image><item><title>Internship at OurMachinery</title><link>/project/themachinery/</link><pubDate>Tue, 01 Jun 2021 14:10:00 +0100</pubDate><guid>/project/themachinery/</guid><description>&lt;p>&lt;a href="http://www.ourmachinery.com">The Machinery&lt;/a> is a lightweight hackable modern game engine, written
+in plain C.Written in plain C. Boots instantly. Responsive UI. Recompiles in seconds. Supports hot
+reloading everywhere. Made to be hacked. Extend or modify with plugins. The flexibility of a custom
+engine with the convenience of a ready-made one.Maximum performance. Fiber-based job system. Modern
+rendering architecture.&lt;/p>
 &lt;h2 id="my-main-responsibilities">My main responsibilities&lt;/h2>
-&lt;p>&lt;strong>The network architecture&lt;/strong>&lt;/p>
-&lt;p>I am in charge for the network architecture which supports the synchronization of millions of entities via the network. The chosen architecture is a &lt;em>peer to peerish&lt;/em> server-client approach, with deterministic lock step, as described in the article &lt;a href="https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php">Age of Empire Network Architecture&lt;/a> and in the book &lt;em>Architecting Networked Games by Joshua L. Glazer and Sanjay Madhav&lt;/em>. The host starts up a dedicated server on their machine and that one confirms the gameplay.&lt;/p>
-&lt;p>&lt;strong>QA Pipeline&lt;/strong>&lt;/p>
-&lt;p>I am working with GitHub Actions. It verifies that our game can be built on Windows (&lt;code>msvc&lt;/code>) and Linux (our test environment is Ubuntu) with GCC9 and Clang9 tool chain. Our code gets also tested and verified with clang-tidy and clang format every time someone pushes. Besides, &lt;code>ctest&lt;/code> runs our unit tests (Catch2).&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Project Information&lt;/th>
-&lt;th>&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Type:&lt;/td>
-&lt;td>Networking RTS&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Duration:&lt;/td>
-&lt;td>Decemeber 2019 - Ongoing Development&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Teamsize:&lt;/td>
-&lt;td>3 Programmers&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Roles:&lt;/td>
-&lt;td>QA Engineer, Engine &amp;amp; Network programmer&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Engine:&lt;/td>
-&lt;td>Eyos Custom Game Framework&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Platform:&lt;/td>
-&lt;td>Windows &amp;amp; Linux&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Languages:&lt;/td>
-&lt;td>C++&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Technologies:&lt;/td>
-&lt;td>cmake, clang &amp;amp; msvc, git, bgfx, GitHub Actions, hack&amp;rsquo;n plan&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="github-card" data-github="Eothaun/Eyos" data-width="400" data-height="153" data-theme="default">&lt;/div>
-&lt;script src="//cdn.jsdelivr.net/github-cards/latest/widget.js">&lt;/script></description></item></channel></rss>
+&lt;p>&lt;strong>Tools Engineering&lt;/strong>&lt;/p>
+&lt;p>During my internship I have been in charge for multiple improvements of the UX of the Editor. I have
+introduced different views to the Asset Browser, which are modeled after the Windows Explorer: Grid,
+List, Detail View. Besides, I have introduced the concept of asset labels, which allows for quick
+grouping assets together with labels. Also the user can filter with those labels assets.&lt;/p>
+&lt;p>The bigger tasks was to introduce a Debugger to our Visual Scripting language. This was were most of
+my time went. I introduced breakpoints, flow visualization, step through and a watch value functionality.&lt;/p>
+&lt;p>&lt;strong>QA Engineering&lt;/strong>&lt;/p>
+&lt;p>I am working with GitHub Actions. It verifies that our engine can be built on Windows (&lt;code>msvc&lt;/code> and
+&lt;code>clang-cl&lt;/code>) and Linux (our test environment is Ubuntu) with the clang tool chain. Besides I have
+been adding functionality of integration tests to the CI system on the server, Integration tests and
+unit tests are running side by side in specific intervals (Unit tests every commit or PR)&lt;/p></description></item></channel></rss>

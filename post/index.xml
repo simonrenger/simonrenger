@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Simon Renger</title><link>/post/</link><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><image><url>/img/icon-192.png</url><title>Posts</title><link>/post/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Simon Renger</title><link>/post/</link><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Fri, 01 May 2020 15:10:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>Posts</title><link>/post/</link></image><item><title>Services</title><link>/post/services/</link><pubDate>Fri, 01 May 2020 15:10:00 +0100</pubDate><guid>/post/services/</guid><description>&lt;h2 id="tools-development">Tools Development&lt;/h2>
+&lt;p>My specializations are:&lt;/p>
+&lt;ul>
+&lt;li>UI / UX improvements&lt;/li>
+&lt;li>commandline tools&lt;/li>
+&lt;li>LLVM&amp;rsquo;s libclang tooling&lt;/li>
+&lt;/ul>
+&lt;h2 id="qa-engineering--management">QA Engineering / Management&lt;/h2>
+&lt;p>My specializations are:&lt;/p>
+&lt;ul>
+&lt;li>setting up your QA Pipeline on GitHub / GitLab, Jenkins Server&lt;/li>
+&lt;li>setting up tests: integration tests, unit tests&lt;/li>
+&lt;li>integration of analytic tools&lt;/li>
+&lt;li>improving existing pipelines with new tools&lt;/li>
+&lt;/ul>
+&lt;h2 id="teaching--coaching">Teaching / Coaching&lt;/h2>
+&lt;ul>
+&lt;li>Programming in C++&lt;/li>
+&lt;li>Programming in C&lt;/li>
+&lt;li>UI / UX fundamentals for Tools programming&lt;/li>
+&lt;/ul>
+&lt;h2 id="availability">Availability&lt;/h2>
+&lt;p>I&amp;rsquo;m available for tools development and QA Engineering / Management, coaching and community
+coordination. Please contact me if you are interested in &lt;a href="mailto:simon.renger@gmail.com">my services&lt;/a>.&lt;/p></description></item></channel></rss>

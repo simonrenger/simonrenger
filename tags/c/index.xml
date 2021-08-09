@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>c | Simon Renger</title><link>/tags/c/</link><atom:link href="/tags/c/index.xml" rel="self" type="application/rss+xml"/><description>c</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2021</copyright><lastBuildDate>Tue, 01 Jun 2021 14:10:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>c</title><link>/tags/c/</link></image><item><title>Internship at OurMachinery</title><link>/project/themachinery/</link><pubDate>Tue, 01 Jun 2021 14:10:00 +0100</pubDate><guid>/project/themachinery/</guid><description>&lt;p>&lt;a href="http://www.ourmachinery.com">The Machinery&lt;/a> is a lightweight hackable modern game engine, written
+in plain C.Written in plain C. Boots instantly. Responsive UI. Recompiles in seconds. Supports hot
+reloading everywhere. Made to be hacked. Extend or modify with plugins. The flexibility of a custom
+engine with the convenience of a ready-made one.Maximum performance. Fiber-based job system. Modern
+rendering architecture.&lt;/p>
+&lt;h2 id="my-main-responsibilities">My main responsibilities&lt;/h2>
+&lt;p>&lt;strong>Tools Engineering&lt;/strong>&lt;/p>
+&lt;p>During my internship I have been in charge for multiple improvements of the UX of the Editor. I have
+introduced different views to the Asset Browser, which are modeled after the Windows Explorer: Grid,
+List, Detail View. Besides, I have introduced the concept of asset labels, which allows for quick
+grouping assets together with labels. Also the user can filter with those labels assets.&lt;/p>
+&lt;p>The bigger tasks was to introduce a Debugger to our Visual Scripting language. This was were most of
+my time went. I introduced breakpoints, flow visualization, step through and a watch value functionality.&lt;/p>
+&lt;p>&lt;strong>QA Engineering&lt;/strong>&lt;/p>
+&lt;p>I am working with GitHub Actions. It verifies that our engine can be built on Windows (&lt;code>msvc&lt;/code> and
+&lt;code>clang-cl&lt;/code>) and Linux (our test environment is Ubuntu) with the clang tool chain. Besides I have
+been adding functionality of integration tests to the CI system on the server, Integration tests and
+unit tests are running side by side in specific intervals (Unit tests every commit or PR)&lt;/p></description></item></channel></rss>
