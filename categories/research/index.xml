@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>research | Simon Renger</title><link>/categories/research/</link><atom:link href="/categories/research/index.xml" rel="self" type="application/rss+xml"/><description>research</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2022</copyright><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>research</title><link>/categories/research/</link></image><item><title>Systematic review of repositories on GitHub with python (Game Dev Style)</title><link>/posts/systematic_review_on_github/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0100</pubDate><guid>/posts/systematic_review_on_github/</guid><description>&lt;p>While I was working on my Masters in &lt;a href="https://www.buas.nl/en/programmes/master-game-technology">Game Technology&lt;/a> at &lt;a href="https://www.buas.nl/en">Breda University of Applied Sciences&lt;/a> (BUas), I came across an interesting problem: &lt;em>How am I executing a systematic review of GitHub repositories?&lt;/em>&lt;/p>
+&lt;p>None of the standard literature regarding methodology covers this case. &lt;em>Okay okay&amp;hellip;&lt;/em> GitHub is relatively new and special!&lt;/p>
+&lt;p>The lack of answers in literature led me into the wild of the Internet. Sadly when googling &lt;em>&amp;lsquo;Systematic Review of GitHub Repositories&amp;rsquo;&lt;/em>, you do not find a &amp;ldquo;HowTo&amp;rdquo; or actually a good GitHub repository with some software.&lt;/p>
+&lt;p>That I find little on regular Google is interesting because Google Scholar gives you a lot of entries when looking for Reviews on GitHub. Sadly, many of these reviews are, as per usual, behind a paywall. Moreover, those papers usually just claim, &amp;ldquo;We did this &amp;hellip; description,&amp;rdquo; but there is seldom any code to be found, or if there is code, it is written in some obscure language an average Game Developer does not use&amp;hellip;&lt;/p>
+&lt;p>Well, I just adjusted my search a bit. Finally, I came across this fantastic article from the &lt;em>Department of Information and Computing Sciences, Utrecht University&lt;/em>: &lt;a href="https://www.mdpi.com/2076-3417/9/1/150">A Systematic Review of Open Source Clinical Software on GitHub for Improving Software Reuse in Smart Healthcare&lt;/a> by &lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a>. They did a fantastic job by creating a paper that explains step-by-step how to do a systematic review of GitHub repositories!&lt;/p>
+&lt;p>Let me give you a TL;DR (for more details, you need to read my paper later or the original paper link above):&lt;/p>
+&lt;p>&lt;strong>Data Extraction&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>We do a preliminary search of our topic with some keywords or topics of our liking by using &lt;a href="https://github.com/search">GitHub Search&lt;/a> and &lt;a href="https://github.com/topics">GitHub Topics&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We try this in multiple languages to find the correct language (I am talking about natural languages such as English). Maybe our specific topic is more common in Spanish than English, or we need to analyze both. This is important to know.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Might we already have a time frame based on our literature review? This is important to take into account when searching for anything on GitHub.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We also need to decide: &lt;em>Are the Programming Languages important or not&lt;/em>? In general, what is needed from this search for our data analysis? For this, I recommend opening the &lt;a href="https://docs.github.com/en/rest/reference/search">REST API&amp;rsquo;s&lt;/a> reference manual: &lt;a href="https://docs.github.com/en/rest/reference/search">GitHub search REST API&lt;/a>. This has a list of things you can extract.&lt;/p>
+&lt;p>4.1 Do I need some extra information besides the repository? Or the byte size usage is essential? If yes, check the rest of the API&amp;rsquo;s documentation. &lt;a href="https://docs.github.com/en/rest/reference">Check out the API&amp;rsquo;s Reference&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We connect to the &lt;a href="https://docs.github.com/en/rest/reference/search">GitHub search REST API&lt;/a> with our python script using a token: &lt;a href="https://docs.github.com/en/rest/overview/other-authentication-methods#basic-authentication">&lt;em>How to use a token to authentify?&lt;/em>&lt;/a> We are using Python and &lt;a href="https://github.com/PyGithub/PyGithub">PyGitHub&lt;/a>, which does most of the work for us.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We can define multiple queries for the search, if needed for your topic. GitHub allows you to search besides regular queries such as &amp;ldquo;&lt;em>scripting languages&lt;/em>&amp;rdquo; also for topics: &amp;ldquo;&lt;em>topic:scripting-languages&lt;/em>&amp;quot;. Using topic queries besides regular queries may increase the results of your search. Moreover, you can exclude things. For example, if you wanted to exclude all Visual Studio Extensions from your search, all you need to do is: &amp;ldquo;&lt;em>scripting languages NOT Visual+Studio&lt;/em>&amp;rdquo; (The &lt;strong>+&lt;/strong> is important because otherwise, it will ignore only &amp;ldquo;&lt;em>Visual&lt;/em>&amp;rdquo; and not &amp;ldquo;&lt;em>Visual Studio&lt;/em>&amp;quot;).
+For more info about the search syntax check: &lt;a href="https://docs.github.com/en/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax">Understanding the search syntax&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>After the last step, you need to store the findings in some form. For example, you can keep your results in a CSV file or in a database.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Data Processing&lt;/strong>&lt;/p>
+&lt;p>This is where my TL;DR ends since this highly depends on your topic. For example, you can do a &lt;em>Descriptive Analysis&lt;/em>, an example of which can be found in the original paper. You can also use &lt;em>Generalized Additive Models&lt;/em> to process the data. Moreover, you might need an AI to analyze all the README files, descriptions, etc., to extract the extra data you need. &lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a> are using Watson to do some of their topic modelings (see &lt;a href="https://www.mdpi.com/2076-3417/9/1/150">2.4. Topic Modeling&lt;/a>).&lt;/p>
+&lt;p>Anyways, as a game dev (or a game dev to be), I love sample code and practical things! This is why I really like the paper I mentioned before since the authors also provided the GitHub repository with the source code of the used code for their study. From an academic point of view, this delights my heart since I could reproduce their paper. The developer in me is happy since I have a script example for my paper! The original source code you can find here: &lt;a href="https://github.com/ianshan0915">ianshan0915&lt;/a>/&lt;a href="https://github.com/ianshan0915/clinical-opensource-projects">&lt;strong>clinical-opensource-projects&lt;/strong>&lt;/a> (a collection of python scripts).&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Warning:&lt;/strong> This repository is not made to be reused to be used for your own project. You can (like I did), but you still need to read the source code and find things you do not need. As I said, I &lt;strong>love&lt;/strong>, absolutely &lt;strong>love&lt;/strong> sample code! This is what this code is for.&lt;/p>
+&lt;/blockquote>
+&lt;p>What does this repo contain? Before we open the GitHub repo and clone it, let&amp;rsquo;s have a look at how they describe it in their paper:&lt;/p>
+&lt;p>&amp;ldquo;&lt;em>The data extraction pipeline was written in Python using a third-party library, &lt;a href="https://github.com/PyGithub/PyGithub">PyGitHub&lt;/a>.&lt;/em>
+&lt;em>The pipeline took the chosen search terms as input and received repository data in JSON. The JSON responses were first filtered and then converted to database records and pushed to tables in a MySQL database. Repositories with no description or no programming language specified were excluded from further analysis for the reason that clinical software was the focus of our study. The whole process is reproducible by running the Python scripts at Reference [22]. Moreover, replacing the search term with others scales the pipeline to other domains.&lt;/em>&amp;rdquo; (22: Source Codes of Open Source Clinical Software. Available online: &lt;a href="https://github.com/ianshan0915/clinical-">https://github.com/ianshan0915/clinical-&lt;/a> opensource-projects (accessed on 25 November 2018)) &lt;a href="https://www.mdpi.com/2076-3417/9/1/150">A Systematic Review of Open Source Clinical Software on GitHub for Improving Software Reuse in Smart Healthcare&lt;/a>&lt;/p>
+&lt;p>After reading the description of their data extraction pipeline, we open the repo. However, there are no instructions on how to use/install the scripts in the README. But no worries, I have a quick summary of what you need:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/PyGithub/PyGithub">PyGitHub&lt;/a> communication with the GitHub REST API&lt;/li>
+&lt;li>&lt;a href="https://pandas.pydata.org/">pandas&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/watson-developer-cloud/python-sdk">Watson Developer Cloud Python SDK&lt;/a> for analysing the readme files and descriptions&lt;/li>
+&lt;li>&lt;a href="https://www.textrazor.com/docs/python">textrazor&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The conclusion for me is it is excellent that I have the code, but I would spend too much time bending it to my will. I can better follow their lead and write my own script, which is something I think all game devs know somehow.&lt;/p>
+&lt;p>&lt;strong>My take on it&lt;/strong>&lt;/p>
+&lt;p>Now, this is what I did, and I ended up with a small Python script that can be used for my purposes. If you need just data collection from GitHub, you can also use it: &lt;a href="https://github.com/simonrenger/collect-data-from-github">GitHub search query python&lt;/a>&lt;/p>
+&lt;p>The script allows you to write a simple configuration JSON file:&lt;/p>
+&lt;pre>&lt;code class="language-json">{
+&amp;quot;token&amp;quot;: &amp;quot;my token&amp;quot;,
+&amp;quot;readme_dir&amp;quot;: &amp;quot;./&amp;quot;,
+&amp;quot;output&amp;quot;: &amp;quot;./&amp;quot;,
+&amp;quot;format&amp;quot;: &amp;quot;CSV&amp;quot;,
+&amp;quot;criteria&amp;quot;: {
+&amp;quot;time&amp;quot;: {
+&amp;quot;min&amp;quot;: 2010,
+&amp;quot;max&amp;quot;: 2022
+}
+},
+&amp;quot;terms&amp;quot;: [
+&amp;quot;MY SEARCH QUERY&amp;quot;,
+&amp;quot;MY SEARCH QUERY&amp;quot;,
+],
+&amp;quot;attrs&amp;quot;: [
+&amp;quot;id&amp;quot;,
+&amp;quot;full_name&amp;quot;,
+]
+}
+&lt;/code>&lt;/pre>
+&lt;p>To communicate with the GitHub API, you need a token you can obtain via your GitHub account. This field is optional, and you can also pass it as an argument to the script if you prefer this! As of writing, you have an hourly request rate of 5000 requests. Besides, the script obeys some cooldown time in between requests to not be locked out by the DDOS security of the API.
+The output field lets you define where your collected data shall be stored. The file name will be &lt;code>repositories_DATE.[csv,json]&lt;/code> since I decided to spill out a CSV or JSON file, you can parse it later if you need to. If you need to download &lt;code>README&lt;/code> files, you also provide a &lt;code>readme_dir&lt;/code> field. They will be stored in there by &lt;code>repo + date&lt;/code>. If it is not present, the script assumes you do not need them. The criteria take the time frame from when to when do you need this, which will be used to collect repositories within the defined time frame.
+The heart of your config is a list of the terms you are searching for:&lt;/p>
+&lt;pre>&lt;code class="language-json"> &amp;quot;terms&amp;quot;: [
+&amp;quot;topic:visual-scripting-language NOT Visual+Studio&amp;quot;,
+&amp;quot;topic:visual-programming-language NOT Visual+Studio&amp;quot;,
+&amp;quot;topic:visual-programming NOT Visual+Studio&amp;quot;,
+&amp;quot;topic:visual-scripting NOT Visual+Studio&amp;quot;,
+&amp;quot;topic:visual-programming-editor NOT Visual+Studio&amp;quot;,
+&amp;quot;topic:dataflow-programming NOT Visual+Studio&amp;quot;
+],
+&lt;/code>&lt;/pre>
+&lt;p>This will execute the criteria for those search terms every time!&lt;/p>
+&lt;p>Last but not least, we have &lt;code>attrs&lt;/code> that allow you to define the fields you care about from the REST API repository. There is more info on what to write in there: &lt;a href="https://docs.github.com/en/rest/reference/search">GitHub search REST API&lt;/a>&lt;/p>
+&lt;p>Now you might wonder how to actually run this script:&lt;/p>
+&lt;pre>&lt;code class="language-bash">python github-search-query.py --help
+&lt;/code>&lt;/pre>
+&lt;p>The previous command will give you some ideas on how to run it. But there is a faster way:&lt;/p>
+&lt;pre>&lt;code class="language-bash">python github-search-query.py config.json
+&lt;/code>&lt;/pre>
+&lt;p>And if you want to pass a token along:&lt;/p>
+&lt;pre>&lt;code class="language-bash">python github-search-query.py --token my_token config.json
+&lt;/code>&lt;/pre>
+&lt;p>Well that&amp;rsquo;s pretty much it! Have fun data collecting!&lt;/p></description></item></channel></rss>
