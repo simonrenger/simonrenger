@@ -1,4 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simon Renger</title><link>/</link><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><description>Simon Renger</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2022</copyright><lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>Simon Renger</title><link>/</link></image><item><title>Systematic review of repositories on GitHub with python (Game Dev Style)</title><link>/posts/systematic_review_on_github/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0100</pubDate><guid>/posts/systematic_review_on_github/</guid><description>&lt;p>While I was working on my Masters in &lt;a href="https://www.buas.nl/en/programmes/master-game-technology">Game Technology&lt;/a> at &lt;a href="https://www.buas.nl/en">Breda University of Applied Sciences&lt;/a> (BUas), I came across an interesting problem: &lt;em>How am I executing a systematic review of GitHub repositories?&lt;/em>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simon Renger</title><link>/</link><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><description>Simon Renger</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Simon Renger 2022</copyright><lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0100</lastBuildDate><image><url>/img/icon-192.png</url><title>Simon Renger</title><link>/</link></image><item><title>GitHub Systematic Review: Know your data.</title><link>/posts/systematic_review_on_github_method_discussion/</link><pubDate>Tue, 05 Apr 2022 00:00:00 +0100</pubDate><guid>/posts/systematic_review_on_github_method_discussion/</guid><description>&lt;p>While I was working on my Masters in &lt;a href="https://www.buas.nl/en/programmes/master-game-technology">Game Technology&lt;/a> at &lt;a href="https://www.buas.nl/en">Breda University of Applied Sciences&lt;/a> (BUas), I came across an interesting problem: &lt;em>How am I executing a systematic review of GitHub repositories?&lt;/em>&lt;/p>
+&lt;p>When searching on the Internet, it was challenging to find good sources. I came across the fantastic work from the &lt;em>Department of Information and Computing Sciences, Utrecht University&lt;/em>: &lt;a href="https://www.mdpi.com/2076-3417/9/1/150">A Systematic Review of Open Source Clinical Software on GitHub for Improving Software Reuse in Smart Healthcare&lt;/a> by &lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a>. They created a paper that explains step-by-step how to do a systematic review of GitHub repositories! As I mentioned in my previous blog post: &amp;ldquo;None of the standard literature regarding methodology covers this case. Okay, okay… GitHub is relatively new and special!&amp;quot;.&lt;/p>
+&lt;p>You can basically follow along and do as they described. See my &lt;a href="https://simonrenger.de/posts/systematic_review_on_github/">previous blog post&lt;/a> for a TL;DR version. I describe how to execute the method of collecting data a little bit more practical with a python script-based example. The example code you can find, of course, on GitHub itself: &lt;a href="https://github.com/simonrenger/collect-data-from-github">&lt;strong>collect-data-from-github&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>This is all great but I wanted to discuss the data collection and processing part a bit more. As I found out, it is very different for each topic what kind of data you need to collect from the &lt;a href="https://docs.github.com/en/rest">GitHub REST API&lt;/a>. Also, it is important to discuss the reasoning behind the data and its processing&lt;/p>
+&lt;h2 id="tldr">TL;DR&lt;/h2>
+&lt;p>When gathering data from GitHub, we need to know in advance what we need for our study. There are 2 data sets we can collect: Textual data and numerical data. The textual data can be separated into Source Code and metadata. The metadata contains tags, topics, descriptions, README, and documentation links. The Numeric values are either date, such as the last date the project was updated, or values, such as the size of the project, the number of people staring the project issues, etc. The textual and numeric data must always be analyzed within the proper context. There are several existing tools that can help one to conduct the analyses.&lt;/p>
+&lt;p>A few important takeaways about some specific data categories:&lt;/p>
+&lt;ul>
+&lt;li>A.I. is important to make sense out of Textual context such as README files or documentation in case manual labor shall be avoided. Such as &lt;a href="https://www.ibm.com/cloud/watson-studio">IBM Watson Natural Language Understanding&lt;/a> &lt;a href="https://www.nltk.org/">Natural Language Toolkit (NLTK)&lt;/a> for python [9] or Google&amp;rsquo;s &lt;a href="https://cloud.google.com/natural-language">Natural Language A.I.&lt;/a> [10].&lt;/li>
+&lt;li>Source Code analyzes can be done by tools such as static analyzes tools, documentation tools or code base visualizers. Such as &lt;a href="https://github.com/CoatiSoftware/Sourcetrail">Sourcetrail&lt;/a> , &lt;a href="https://sourcegraph.com/">Source Graph&lt;/a>.&lt;/li>
+&lt;li>Stars are a indication of interest in a project which needs to be set into a proper context, which can be done with tools such as &lt;a href="https://github.com/RepoReapers/reaper">RepoReaper&lt;/a> and &lt;a href="https://ghtorrent.org/">GHTorrent&lt;/a>. The second meaning of stars is just to bookmark something which does not guarantee that I am actually interested in this project. Also, the risk of distortion from fake stars or promotion actions can have an influence on star growth.&lt;/li>
+&lt;li>Commits are a not reliable source to use to calculate if a project is successful or popular when matched with stars. Due to the reason that every project has their own commit policy [14].&lt;/li>
+&lt;li>Forks are somewhat more reliable since there is a strong indication that they are connected with the number of stars. However, one should keep in mind that there is also the ability to have bots that do nothing else than fork projects. [14]&lt;/li>
+&lt;/ul>
+&lt;h2 id="what-kind-of-data-can-you-collect-on-github">What kind of data can you collect on GitHub?&lt;/h2>
+&lt;p>GitHub provides a REST API [2], which is an service that allows the user to send request to it in a defined way (protocol) via the HTTP protocol and receive answers [3]. The service provides a lot of entry points, for a systematic review of GitHub Projects the &lt;a href="https://docs.github.com/en/rest/reference/search">search&lt;/a> endpoint, the REST API part that is concert with searching for repositions, is very important. Besides this, there are a few other endpoints that will be very useful which are listen in &lt;strong>Table 1&lt;/strong>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Endpoint&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="https://docs.github.com/en/rest/reference/repos">Repositories&lt;/a>&lt;/td>
+&lt;td>&amp;ldquo;The Repos API allows access information about GitHub repositories.&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://docs.github.com/en/rest/reference/projects">Projects&lt;/a>&lt;/td>
+&lt;td>&amp;ldquo;The Projects API let you fetch projects in a repository.&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://docs.github.com/en/rest/reference/orgs">Organizations&lt;/a>&lt;/td>
+&lt;td>&amp;ldquo;The Organizations API let you fetch information about a GitHub organizations.&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>&lt;strong>Table 1:&lt;/strong> Useful other API endpoints than the &lt;a href="https://docs.github.com/en/rest/reference/search">Search&lt;/a>&lt;/em>.&lt;/p>
+&lt;p>From the GitHub REST API you can gather two kind of main data types: &lt;em>Numerical and Textual&lt;/em>. These can be used for further analyzes. There are two different textual information you can collect on GitHub: &lt;em>Source Code and Meta data&lt;/em> to describe the repository [1,2].&lt;/p>
+&lt;p>The Source Code for example can be scanned manually or via a static analyzes tool or any other tool that can understand source code and gives us a meaning full understanding of it. Alberto S.Nuñez-Varela et al., has shown in their study &lt;em>Source code metrics: A systematic mapping study&lt;/em> [5] what kind of metrics can be applied when analyzing source code. The results of their work are very interesting since they report of almost 300 source code metrics. They also concluded that object oriented metrics have been mostly found and more research is needed to conduct to gather metrics for more feature oriented aspects.&lt;/p>
+&lt;p>Furthermore, to analyze source code from a practical point of view. If one is looking for certain patterns, tools to visualize a codebase are useful. &lt;a href="https://github.com/CoatiSoftware/Sourcetrail">Sourcetrail&lt;/a> is such an open source tool that lets you navigate through the code base virtually. An other useful tool is &lt;a href="https://sourcegraph.com/">Source Graph&lt;/a> which allows you to search your code and 2M+ open source repositories [6].&lt;/p>
+&lt;p>The other meta data such as README files, wiki or documentation stored in the project needs to be analyzed by hand or with the raise of AI one can make use of tools such as IBM Watson Natural Language Understanding [7] to help understand and process natural language. How you can use IBM&amp;rsquo;s Watson is greatly explained in the following article: &lt;a href="https://medium.com/analytics-vidhya/getting-started-with-notebooks-in-ibm-watson-nlu-part-1-3b0b92894901">Getting started with NLP using IBM Watson Studio&lt;/a> by &lt;a href="https://medium.com/@developeraritro?source=post_page-----3b0b92894901-----------------------------------">Aritro Mukherjee&lt;/a> [8]. There are, of course, other alternatives such as &lt;a href="https://www.nltk.org/">Natural Language Toolkit (NLTK)&lt;/a> for python [9] or Google&amp;rsquo;s &lt;a href="https://cloud.google.com/natural-language">Natural Language AI&lt;/a> [10]. These AI driven tools can help to identify themes, topics or search for the needed information within the meta data of a repository.&lt;/p>
+&lt;p>In the space of numerical values we have also again two types: Dates and numerical values [1,4]. The dates can be used for our limitations since GitHub gives us only 3 dates [4]: &lt;code>pushed_at&lt;/code>, &lt;code>updated_at&lt;/code>,&lt;code>created_at&lt;/code>. The meaning behind them can be described as updated_at will be updated any time the repository object is updated. A repository object is updated when one, for example, update the description or the primary language of the repository. On the other hand, &lt;code>pushed_at&lt;/code> represents the date and time of the last commit. Since updated_at represents the timestamp of the last change to the repository which might be a be a commit, but it may also be other things, such as changing the description of the repo, creating wiki pages, etc. That is why one can say that commits are a subset of updates, and the &lt;code>pushed_at&lt;/code> timestamp will therefore, either be the same as the updated_at timestamp, or it will be an earlier timestamp [2,11].&lt;/p>
+&lt;p>The other numeric values of interest can be gather from a GitHub Repository are described in &lt;strong>Table 2&lt;/strong>:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Numeric Value&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Stargazers&lt;/td>
+&lt;td>&amp;ldquo;Stargazers refers to the number of times a repository is bookmarked. It reflects an approximate level of interest in the repository&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Forks&lt;/td>
+&lt;td>&amp;ldquo;A fork is a copy of a repository. Forking is necessary for developers to contribute a project. Forks refers to the number of forks.&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Contributors&lt;/td>
+&lt;td>&amp;ldquo;The number of contributors who have worked for a repository.&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Commits&lt;/td>
+&lt;td>&amp;ldquo;The total number of commits.&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Issues&lt;/td>
+&lt;td>&amp;ldquo;Issues is the number of open issues in a repository&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Size of source codes&lt;/td>
+&lt;td>&amp;ldquo;The size is valued as the size of the whole repository (including all of its history), in KB.&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Size of README file&lt;/td>
+&lt;td>&amp;ldquo;The size of the README file of a repository, in B&amp;rdquo; [1,2]&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Table 2:&lt;/strong> Overview of numerical values one can gather on GitHub*&lt;/p>
+&lt;p>This data can be used and processed with methods such as GAM which are a extension of generalized linear models (GLMs), a GAM is an additive modeling technique that captures the impact of the predictive variables through smooth functions [1,2].&lt;/p>
+&lt;h2 id="the-meaning-of-numeric-values-starsforks-and-commits">The meaning of numeric values: Stars,Forks and Commits&lt;/h2>
+&lt;p>&lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a> as well as of other researchers [13,14,15] are suggesting to use stargazers (stars) as indication of popularity. Research has shown that the &amp;ldquo;stargazers-based classifier [&amp;hellip;] to exhibit high precision (97%)&amp;rdquo; when trying to find retrieving engineered software projects [16]. Munaiah, N at all Research results in &lt;a href="https://github.com/RepoReapers/reaper">&amp;ldquo;RepoReaper&amp;rdquo;&lt;/a>. &lt;a href="https://github.com/RepoReapers/reaper">RepoReaper&lt;/a> &amp;ldquo;is a tool used to assess a GitHub repository in the form of a score. It considers a number of different &lt;em>attributes&lt;/em> in order to perform a thorough assessment.&amp;rdquo; [17] This tool is intend to be used with &amp;ldquo;together with a database of metadata provided by the &lt;a href="https://ghtorrent.org/">GHTorrent&lt;/a> project, reaper considers both contextual information such as commit history as well as the contents of the repository itself [17].&amp;rdquo; RepoReaper can be helpful in order to score the results of your systematic review of a subset of specific projects.&lt;/p>
+&lt;h3 id="the-meaning-of-stars-from-a-developer-point-of-view">The Meaning of stars from a developer point of view&lt;/h3>
+&lt;p>However it is important to discuss the meaning of stars, forks, and commits. As stated by GitHub, stars are a method to keep track of projects that you find interesting or discover via the explore/ &amp;ldquo;news&amp;rdquo; feed related projects [18]. They are also frequently used by the community as bookmarks [15]. As explained in several sources, such as from &lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a> and a lot of other researchers [13,14,15] ,stars have two major functions. They function as an indication that someone likes the project or that they want to book mark the project [15]. A developer on OpenSource Stackexchange states this perfectly: &amp;ldquo;[…] Users on the GitHub website are able to &amp;ldquo;star&amp;rdquo; other people&amp;rsquo;s repositories, thereby saving them in their list of Starred Repos. Some people use &amp;ldquo;stars&amp;rdquo; to indicate that they like a project, other people use them as bookmarks so they can follow what&amp;rsquo;s going on with the repo later. […]&amp;rdquo; &lt;a href="https://opensource.stackexchange.com/users/520/left-se-on-10-6-19">15, Left SE On 10_6_19&lt;/a>].&lt;/p>
+&lt;p>Hudson Borges et al, provide the academic data to the statements gathered on OpenSource Stackexchange [15] in their survey of 791 developers describe how they use stars on GitHub[14]. Their &lt;em>Table 2&lt;/em> [14] shows this.&lt;/p>
+&lt;p>Note: Note that one answer can receive more than one theme therefore numbers might not add up to 791 for more details see &lt;a href="https://www.sciencedirect.com/science/article/pii/S0164121218301961">Paper&lt;/a>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Reason&lt;/th>
+&lt;th>Total&lt;/th>
+&lt;th>%&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>To show appreciation&lt;/td>
+&lt;td>415&lt;/td>
+&lt;td>52.5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Bookmarking&lt;/td>
+&lt;td>404&lt;/td>
+&lt;td>51.1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Due to usage&lt;/td>
+&lt;td>290&lt;/td>
+&lt;td>36.7&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Due to recommendations&lt;/td>
+&lt;td>36&lt;/td>
+&lt;td>4.6&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Unknown reasons&lt;/td>
+&lt;td>5&lt;/td>
+&lt;td>0.6&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>&lt;strong>Table 3&lt;/strong>. Why do users star GitHub repositories? (95% confidence level with a 3.15% confidence interval). based on Table 2 from &amp;ldquo;What’s in a GitHub Star? Understanding Repository Starring Practices in a Social Coding Platform&amp;rdquo; by Hudson Borges at al.&lt;/em>&lt;/p>
+&lt;p>The reason why one needs to look at stars critical is that from technical perspective they are simple to fake. Since it is very simple to just create GitHub fake accounts and write a bot that just likes your project [15]. Besides the simplicity of faking stars a huge growth of stars might be the result of a promotion on social media (e.g. twitter) [13]. Hudson Borges at al suggests that &amp;ldquo;when ranking projects, we should check whether stars are result of active promotion&amp;rdquo; in their recommendations for researchers at the end of their journal article [15]. There are two main reasons why we should look critically on stars. Firstly one is that they might be created through fake accounts. Secondly they might be a result of active promotion on social media platforms.&lt;/p>
+&lt;p>Moreover Hudson Borges et al, suggested in their final conclusion that stars are important for users to pick a project. The study found out that 3 out of 4 developers (of the 791 developers surveyed developers) check the stars metric before using or contributing to projects. Despite this strong indication between stars and popularity, the paper suggested that other factors such as code quality and documentation are important. Both factors can be evaluated with &lt;a href="https://github.com/RepoReapers/reaper">RepoReaper&lt;/a> in order to create a relationship between popularity and documentation / code quality [16,17]. For a lot of developers stars are a great indication to either contribute to a project but not just other factors such as code quality and documentation necessary.&lt;/p>
+&lt;h3 id="forks-and-commits">Forks and commits&lt;/h3>
+&lt;p>Research has shown that forks can be used to evaluate the popularity of a project since there is a strong correlation between stars and forks [15]. It is noteworthy to say that there are fork bots out there that just fork a project automatically since this can also be done automatic via the REST API [2]. That bots may create forks of projects might be important to consider when using the fork value as a indication for popularity. Forking a project via bots is not that frequently done as for stars that this can be ignored but still it is important to keep this in mind when building an argumentation about the correlation between stars and forks.&lt;/p>
+&lt;p>Commits however only show a weak correlation with stars [15]. This can be explained with the practical reason that the way a project handles its commits can differ greatly, since every bigger project has their own policies in regards to how often one shall commit and how big they shall be. For example, The QT project has its own policies &lt;a href="https://wiki.qt.io/Commit_Policy">Commit Policy&lt;/a> or the KDE Projects &lt;a href="https://community.kde.org/Policies/Commit_Policy">Policies/Commit Policy&lt;/a>. Looking at this from a developer point of view, it explains than that the number of commits in relation to stars or in general towards the project popularity cannot be a hard link. The main indication of commits is to show how actively maintained a project is. Every commit will change the &lt;code>pushed_at&lt;/code> date. The fact that every project might have their own commit policy explains why the number of commits and the projects popularity has just a weak link.&lt;/p>
+&lt;h2 id="takeaways">Takeaways&lt;/h2>
+&lt;p>The main takeaways are that when one is analyzing GitHub repositories, one has to take the different limiting factors into account. These limiting factors are sometimes better described by users of GitHub than by pure academia. The best example is the discussion on Opensource Stack Exchange &lt;a href="https://opensource.stackexchange.com/questions/5110/github-stars-is-a-very-useful-metric-but-for-what">&amp;ldquo;GitHub Stars&amp;rdquo; is a very useful metric. But for &lt;em>what&lt;/em>?&lt;/a> from &lt;a href="https://opensource.stackexchange.com/users/520/left-se-on-10-6-19">Left SE On 10_6_19&lt;/a>. Moreover, it is important to realize what is the meaning behind the possible metrics. There has been some great work done by several authors [1,5,13,16]. Therefore it can be said that:&lt;/p>
+&lt;ul>
+&lt;li>A.I. is important to make sense out of Textual context such as README files or documentation in case manual labor shall be avoided. Such as &lt;a href="https://www.ibm.com/cloud/watson-studio">IBM Watson Natural Language Understanding&lt;/a> &lt;a href="https://www.nltk.org/">Natural Language Toolkit (NLTK)&lt;/a> for python [9] or Google&amp;rsquo;s &lt;a href="https://cloud.google.com/natural-language">Natural Language A.I.&lt;/a> [10].&lt;/li>
+&lt;li>Source Code analyzes can be done by tools such as static analyzes tools, documentation tools or code base visualizers. Such as &lt;a href="https://github.com/CoatiSoftware/Sourcetrail">Sourcetrail&lt;/a> , &lt;a href="https://sourcegraph.com/">Source Graph&lt;/a>.&lt;/li>
+&lt;li>Stars are a indication of interest in a project which needs to be set into a proper context, which can be done with tools such as &lt;a href="https://github.com/RepoReapers/reaper">RepoReaper&lt;/a> and &lt;a href="https://ghtorrent.org/">GHTorrent&lt;/a>. The second meaning of stars is just to bookmark something which does not guarantee that I am actually interested in this project. Also, the risk of distortion from fake stars or promotion actions can have an influence on star growth.&lt;/li>
+&lt;li>Commits are a not reliable source to use to calculate if a project is successful or popular when matched with stars. Due to the reason that every project has their own commit policy [14].&lt;/li>
+&lt;li>Forks are somewhat more reliable since there is a strong indication that they are connected with the number of stars. However, one should keep in mind that there is also the ability to have bots that do nothing else than fork projects. [14]&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>[1] &lt;em>Department of Information and Computing Sciences, Utrecht University&lt;/em>: &lt;a href="https://www.mdpi.com/2076-3417/9/1/150">A Systematic Review of Open Source Clinical Software on GitHub for Improving Software Reuse in Smart Healthcare&lt;/a> by &lt;a href="https://sciprofiles.com/profile/563999">&lt;strong>Zhengru Shen&lt;/strong>&lt;/a> and &lt;a href="https://sciprofiles.com/profile/383240">&lt;strong>Marco Spruit&lt;/strong>&lt;/a>&lt;/p>
+&lt;p>[2] &lt;a href="https://docs.github.com/en/rest">GitHub REST API&lt;/a> (accessed on 02 April 2022).&lt;/p>
+&lt;p>[3] &lt;a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api">What is a REST API?&lt;/a> (accessed on 02 April 2022).&lt;/p>
+&lt;p>[4] &lt;a href="https://docs.github.com/en/rest/reference/repos">GitHub Repositories&lt;/a> (accessed on 02 April 2022).&lt;/p>
+&lt;p>[5] Alberto S. Nuñez-Varela, Héctor G. Pérez-Gonzalez, Francisco E. Martínez-Perez, Carlos Soubervielle-Montalvo,
+Source code metrics: A systematic mapping study, Journal of Systems and Software, Volume 128, 2017 &lt;a href="https://doi.org/10.1016/j.jss.2017.03.044">https://doi.org/10.1016/j.jss.2017.03.044&lt;/a>.&lt;/p>
+&lt;p>[6] &lt;a href="https://sourcegraph.com/">Source Graph&lt;/a> (accessed on 02 April 2022).&lt;/p>
+&lt;p>[7] BM Watson Natural Language Understanding. Available online: &lt;a href="https://www.ibm.com/cloud/watson-natural-language-understanding">https://www.ibm.com/cloud/watson-natural-language-understanding&lt;/a> (accessed on 02 April 2022).&lt;/p>
+&lt;p>[8] &lt;a href="https://medium.com/analytics-vidhya/getting-started-with-notebooks-in-ibm-watson-nlu-part-1-3b0b92894901">Getting started with NLP using IBM Watson Studio&lt;/a> by &lt;a href="https://medium.com/@developeraritro?source=post_page-----3b0b92894901-----------------------------------">Aritro Mukherjee&lt;/a> (accessed on 02 April 2022)&lt;/p>
+&lt;p>[9] &lt;a href="https://www.nltk.org/">Natural Language Toolkit (NLTK)&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[10] Google&amp;rsquo;s &lt;a href="https://cloud.google.com/natural-language">Natural Language AI&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[11] &lt;a href="https://github.community/t/difference-between-updated-at-and-pushed-at-in-repositories-list-response/13938">Difference between “updated_at” and “&lt;code>pushed_at&lt;/code>” in repositories list response&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[12] Wood, S.N. Generalized Additive Models: An Introduction with R; Chapman and Hall/CRC: London, UK, 2006.&lt;/p>
+&lt;p>[13] Characterizing and predicting the popularity of github projects by &lt;a href="https://repositorio.ufmg.br/browse?type=author&amp;amp;value=Hudson+Silva+Borges"> Hudson Silva Borges&lt;/a> &lt;a href="https://repositorio.ufmg.br/handle/1843/BIRC-BBLN2S">https://repositorio.ufmg.br/handle/1843/BIRC-BBLN2S&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[14] Hudson Borges, Marco Tulio Valente, What’s in a GitHub Star? Understanding Repository Starring Practices in a Social Coding Platform, Journal of Systems and Software,Volume 146, 2018, Pages 112-129, ISSN 0164-1212, &lt;a href="https://doi.org/10.1016/j.jss.2018.09.016">https://doi.org/10.1016/j.jss.2018.09.016&lt;/a>.&lt;/p>
+&lt;p>[15] &lt;a href="https://opensource.stackexchange.com/questions/5110/github-stars-is-a-very-useful-metric-but-for-what">&amp;ldquo;GitHub Stars&amp;rdquo; is a very useful metric. But for &lt;em>what&lt;/em>?&lt;/a> asked by &lt;a href="https://opensource.stackexchange.com/users/520/left-se-on-10-6-19">Left SE On 10_6_19&lt;/a> on &lt;a href="https://opensource.stackexchange.com/">opensource.stackexchange.com&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[16] Munaiah, N., Kroh, S., Cabrey, C. et al. Empir Software Eng (2017) 22: 3219. &lt;a href="https://doi.org/10.1007/s10664-017-9512-6">https://doi.org/10.1007/s10664-017-9512-6&lt;/a>&lt;/p>
+&lt;p>[17] &lt;a href="https://github.com/RepoReapers/reaper">RepoReaper&lt;/a> (access on 02 April 2022)&lt;/p>
+&lt;p>[18] &lt;a href="https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars">Saving repositories with stars&lt;/a> (access on 02 April 2022)&lt;/p></description></item><item><title>Systematic review of repositories on GitHub with python (Game Dev Style)</title><link>/posts/systematic_review_on_github/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0100</pubDate><guid>/posts/systematic_review_on_github/</guid><description>&lt;p>While I was working on my Masters in &lt;a href="https://www.buas.nl/en/programmes/master-game-technology">Game Technology&lt;/a> at &lt;a href="https://www.buas.nl/en">Breda University of Applied Sciences&lt;/a> (BUas), I came across an interesting problem: &lt;em>How am I executing a systematic review of GitHub repositories?&lt;/em>&lt;/p>
 &lt;p>None of the standard literature regarding methodology covers this case. &lt;em>Okay okay&amp;hellip;&lt;/em> GitHub is relatively new and special!&lt;/p>
 &lt;p>The lack of answers in literature led me into the wild of the Internet. Sadly when googling &lt;em>&amp;lsquo;Systematic Review of GitHub Repositories&amp;rsquo;&lt;/em>, you do not find a &amp;ldquo;HowTo&amp;rdquo; or actually a good GitHub repository with some software.&lt;/p>
 &lt;p>That I find little on regular Google is interesting because Google Scholar gives you a lot of entries when looking for Reviews on GitHub. Sadly, many of these reviews are, as per usual, behind a paywall. Moreover, those papers usually just claim, &amp;ldquo;We did this &amp;hellip; description,&amp;rdquo; but there is seldom any code to be found, or if there is code, it is written in some obscure language an average Game Developer does not use&amp;hellip;&lt;/p>
